@@ -30,6 +30,7 @@ Status: public web/source check for the JORS-shaped MIRROR article package. This
 | RFC 5280, DOI `10.17487/RFC5280` | RFC Editor page/search result checked for X.509 PKI Certificate and CRL Profile title, RFC number, date, and DOI. | PKI vertical-adjacent governance layer. |
 | Regulation (EU) No 910/2014, `https://eur-lex.europa.eu/eli/reg/2014/910/oj/eng` | EUR-Lex page checked for eIDAS title, Official Journal date, and trust-services scope. | Legal trust-services comparison without claiming legal attestation. |
 | ETSI EN 319 102-1 V1.4.1, `https://www.etsi.org/deliver/etsi_en/319100_319199/31910201/01.04.01_60/en_31910201v010401p.pdf` | ETSI deliverable checked for AdES creation/validation title and 2024-06 version. | ETSI validation-procedure reference for the “higher governance stack” paragraph. |
+| EATF documentation, `https://www.eatf.eu/docs` | Live page checked 2026-05-30 for Agent Trust Framework name, documentation URL, evidence-layer framing, and statement that EATF is not an eIDAS trust service. | Future signing comparison, note 2, and reference 17. |
 
 ## Local MIRROR checks
 

@@ -58,4 +58,5 @@ Status: public web/source check for the JORS-shaped MIRROR article package. This
 - Public release metadata was added after the first local article build: Apache License 2.0, `README.md`, `CITATION.cff`, `.zenodo.json`, `codemeta.json`, contributor notes, reviewer guide, and release notes.
 - The canonical public software record is `https://zenodo.org/records/20463358`.
 - Zenodo DOI published for the public release package: `10.5281/zenodo.20463358`, record `https://zenodo.org/records/20463358`.
-- JORS route remains an article-submission route until venue submission, cover letter, and reviewer suggestions are finalized.
+- JORS route was submitted on 2026-05-30 as OJS submission `753`; cover letter
+  and reviewer suggestions were finalized in the portal.

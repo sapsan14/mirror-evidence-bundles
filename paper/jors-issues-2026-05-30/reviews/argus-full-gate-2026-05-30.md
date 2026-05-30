@@ -1,6 +1,6 @@
 # Argus full gate, 2026-05-30
 
-Verdict: ARGUS-CLEAN-ARTICLE / ARGUS-YELLOW-SUBMISSION.
+Verdict: ARGUS-CLEAN-ARTICLE / ARGUS-SUBMITTED-JORS.
 
 ## Gate results
 
@@ -16,8 +16,10 @@ Verdict: ARGUS-CLEAN-ARTICLE / ARGUS-YELLOW-SUBMISSION.
 | Reference reality | PASS | Venue, sample JORS papers, PROV, RO-Crate, C2PA, SLSA, Sigstore, NIST FIPS 180-4, RFC 5280, eIDAS, and ETSI sources checked and logged. |
 | Claims discipline | PASS | The paper repeatedly states that MIRROR does not establish truth, authorship, legal compliance, public-release readiness, timestamping, or regulated assurance. |
 | MIRROR test evidence | PASS | `uv run pytest -q`: 115 passed. Verifier positive and negative fixtures ran with expected results. |
-| External submission readiness | YELLOW | Zenodo public record URL, Apache-2.0 license, citation metadata, contributor docs, reviewer guide, and public-safe evidence package are prepared. Cover letter and reviewer suggestions remain venue-stage decisions. |
+| External submission readiness | PASS | Zenodo public record URL, Apache-2.0 license, citation metadata, contributor docs, reviewer guide, public-safe evidence package, cover letter, reviewer suggestions, and OJS upload were completed. JORS submission ID: `753`. |
 
 ## Argus conclusion
 
-The artifact is clean enough to circulate as a public-release article package and thesis case-study draft. It is near submission-ready for JORS Issues once the cover letter and reviewer suggestions are prepared. The paper no longer depends on a private-only evidence surface.
+The artifact was clean enough for JORS Issues submission and was submitted as
+OJS submission `753` on 2026-05-30. The paper no longer depends on a private-only
+evidence surface. Editorial review outcome remains pending.

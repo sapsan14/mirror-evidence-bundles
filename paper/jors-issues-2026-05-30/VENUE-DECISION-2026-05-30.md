@@ -1,8 +1,9 @@
 # MIRROR venue decision, 2026-05-30
 
-Selected working route: **Journal of Open Research Software (JORS), Issues in Research Software**.
+Selected route: **Journal of Open Research Software (JORS), Issues in Research Software**.
 
-Status: public-release route. No external venue submission, signature, timestamp, or editor contact was performed in this gate.
+Status: submitted through JORS OJS on 2026-05-30 as submission `753`. No
+signature, timestamp, or legal-assurance claim was made in this gate.
 
 ## Why this venue
 
@@ -35,14 +36,17 @@ Observed style: compact title page, direct abstract, numbered sections, display 
 - **Data & Policy**: topically adjacent, but the vault already has active Data & Policy traffic nearby; MIRROR would also need a stronger policy audience rewrite.
 - **DTRAP / security venues**: possible later if MIRROR is reframed around artifact-evaluation security or signed handoff, but the current paper is research-software practice rather than threat research.
 
-## Before real submission
+## Submission gate outcome
 
-1. Keep JORS Issues as the primary venue.
-2. Publish and verify the sanitized Zenodo software archive.
-3. Use the published Zenodo software DOI in the Data Accessibility and citation statements.
-4. Use OSF/MetaArXiv only for the manuscript preprint if a preprint-first route is strategically useful.
-5. Prepare a cover letter and three reviewer suggestions.
-6. Run Argus again after the DOI, if any, is known.
+1. JORS Issues remained the primary venue.
+2. The sanitized Zenodo software archive was published and verified.
+3. The published Zenodo software DOI was used in Data Accessibility and
+   citation statements.
+4. OSF/MetaArXiv manuscript-preprint deposit was not used before JORS
+   submission.
+5. Cover letter and three reviewer suggestions were prepared and entered.
+6. Argus was rerun after the DOI and article polish; the article was green, with
+   only submission logistics left before the portal step.
 
 ## Deposit route
 

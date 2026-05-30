@@ -1,6 +1,9 @@
 # JORS submission fields, 2026-05-30
 
-Status: prepared for browser submission. Do not click the final submit button without the author's explicit action.
+Status: submitted through JORS OJS on 2026-05-30 as submission `753`.
+
+Human/agent boundary: the agent filled the form and stopped at the final Review
+screen; Anton clicked final Submit.
 
 ## Journal and section
 
@@ -78,15 +81,15 @@ Potential peer reviewers are suggested below because of their expertise in resea
 ## Files to upload
 
 Primary manuscript PDF:
-`/home/anton/projects/mirror-evidence-bundles/paper/jors-issues-2026-05-30/mirror-jors-issues-v0.1.pdf`
+`paper/jors-issues-2026-05-30/mirror-jors-issues-v0.1.pdf`
 
 Source file:
-`/home/anton/projects/mirror-evidence-bundles/paper/jors-issues-2026-05-30/mirror-jors-issues-v0.1.tex`
+`paper/jors-issues-2026-05-30/mirror-jors-issues-v0.1.tex`
 
 Source ZIP, if the portal accepts one source upload:
-`/home/anton/projects/mirror-evidence-bundles/paper/jors-issues-2026-05-30/mirror-jors-issues-v0.1-source.zip`
+`paper/jors-issues-2026-05-30/mirror-jors-issues-v0.1-source.zip`
 
 Optional BibTeX sidecar, if the portal wants source files separately rather than a ZIP:
-`/home/anton/projects/mirror-evidence-bundles/paper/jors-issues-2026-05-30/mirror-jors-issues-v0.1.bib`
+`paper/jors-issues-2026-05-30/mirror-jors-issues-v0.1.bib`
 
 Do not upload the review notes unless the portal explicitly asks for supplementary review documentation.

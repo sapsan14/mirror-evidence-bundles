@@ -36,11 +36,21 @@ Status: public web/source check for the JORS-shaped MIRROR article package. This
 | Source | Check | Use |
 |---|---|---|
 | `pyproject.toml` | Local file declares Python `>=3.12`, `jsonschema==4.23.0`, `pytest==8.3.5`. | Reproducibility environment note. |
-| `uv run pytest -q` | 166 tests passed on 2026-05-30. | Main test statistic in abstract and method. |
+| `uv run pytest -q` | 115 tests passed on 2026-05-30. | Main test statistic in abstract and method. |
 | `python3 verify.py examples/good/artifact.md.bundle` | Returned `{"errors": [], "status": "ok"}`. | Positive verifier fixture. |
 | `python3 verify.py examples/bad-hash/artifact.md.bundle` | Returned expected `fail` with hash mismatch. | Negative verifier fixture. |
 | `python3 verify.py release/mirror-methodology-rc1/examples/minimal-artifact.md.bundle` | Returned `ok`. | Worked-example verification. |
 | `python3 verify.py release/mirror-methodology-rc1/paper.md.bundle` | Returned `ok`. | RC1 paper bundle verification. |
+
+## JANUS worked-case checks
+
+| Source | Check | Use |
+|---|---|---|
+| JANUS clean-preprint packet status note | Public-safe packet recorded a 19-page PDF, source ZIP, public data/code supplement ZIP, status note, and SHA-256 manifest. | Worked-case artifact counts and Data Accessibility wording. |
+| JANUS public data/code supplement manifest | Recorded 21 public files: 7 CSV, 6 Python scripts, 5 PNG plots, 2 Markdown files, and 1 `requirements.txt`. | Downloadable data/script statement in the case study. |
+| JANUS local test report | 49 tests passed. | Worked-case test statistic. |
+| JANUS clean-preprint build log scan | No undefined citations, undefined references, rerun requests, errors, or overfull boxes in the final log scan. | Public packet readiness statement. |
+| JANUS row-level leakage scan | Public scanned CSV/text/script surfaces passed; reviewer-only material retained four expected warnings and was not promoted to the public tier. | Boundary statement separating public-safe evidence from private/reviewer-only material. |
 
 ## Known source limits
 

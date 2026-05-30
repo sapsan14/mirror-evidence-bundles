@@ -1,5 +1,5 @@
 \documentclass[10pt]{article}
-\usepackage[letterpaper,margin=0.82in]{geometry}
+\usepackage[letterpaper,margin=0.75in]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
@@ -24,7 +24,7 @@
   urlcolor=blue
 }
 \urlstyle{same}
-\setlength{\parskip}{4pt}
+\setlength{\parskip}{3pt}
 \setlength{\parindent}{0pt}
 \setlist[itemize]{leftmargin=*,topsep=2pt,itemsep=1pt}
 \setlist[enumerate]{leftmargin=*,topsep=2pt,itemsep=1pt}
@@ -38,7 +38,7 @@
 \begin{document}
 
 \begin{center}
-{\LARGE \textbf{\mirror{}: Local Evidence Bundles for Reproducible Research Software Review}}\\[4pt]
+{\LARGE \textbf{\mirror{}: Local Evidence Bundles for Reproducible Research Software Review, with a JANUS Case Study}}\\[4pt]
 Anton Sokolov\\
 Researcher, Tyche Institute, Tallinn, Estonia\\
 ORCID: 0000-0003-2452-7096\\[4pt]
@@ -46,7 +46,7 @@ ORCID: 0000-0003-2452-7096\\[4pt]
 \end{center}
 
 \begin{abstract}
-\mirror{} is a small research-software method for keeping drafts, scripts, source copies, and claim records reviewable while an iterative research project is still moving. A \mirror{} bundle places an artifact, structured claims, provenance notes, source descriptors or retained source copies, assumptions, and SHA-256 digests into a local directory that can be verified offline. This article reports the design as an experience paper for research software practice. Its central claim is deliberately narrow: byte-level replay and schema conformance can reduce the cost of later review, but they do not establish truth, completeness, authorship, legal compliance, public release authority, or regulated trust-service status. The case study is a private local workspace in which autonomous workers and human review produced draft papers, evidence packages, and daily roll-ups. The current implementation passed 166 local tests and a set of positive and negative verifier fixtures, including expected failures for hash mismatches and unsafe assurance language. The main contribution is not another assurance badge, but a boundary discipline: a reviewer should be able to ask what bytes were retained, which claim points to which evidence, what failed, and what still requires human judgment.
+\mirror{} is a small research-software method for keeping drafts, scripts, source copies, and claim records reviewable while an iterative research project is still moving. A \mirror{} bundle places an artifact, structured claims, provenance notes, source descriptors or retained source copies, assumptions, and SHA-256 digests into a local directory that can be verified offline. This article reports the design as an Issues in Research Software experience paper and uses JANUS, a multilingual drift-triage manuscript and data packet, as the worked case. JANUS is not a second main contribution; it is a deliberately messy case in which claims, generated outputs, source boundaries, public-safe examples, scripts, and reviewer risk had to be separated before release. The central claim is narrow: byte-level replay and schema conformance can reduce the cost of later review, but they do not establish truth, completeness, authorship, legal compliance, public release authority, external timestamping, or regulated assurance. The current \mirror{} implementation passed 115 local tests and positive and negative verifier fixtures, while the JANUS public-safe packet passed its own build, test, checksum, and leakage checks. The main contribution is not another assurance badge, but a boundary discipline: a reviewer should be able to ask what bytes were retained, which claim points to which evidence, what failed, and what still requires human judgment.
 \end{abstract}
 
 \textbf{Keywords:} research software; reproducibility; provenance; evidence bundles; artifact review; software sustainability
@@ -73,7 +73,9 @@ where \(H\) is SHA-256 and \(\mathrm{policy}\) is a local guardrail over configu
 
 \textbf{Lemma 1: Byte replay is not claim truth.} If \(V(B)=\mathrm{ok}\), then the retained local files match the recorded hashes and schemas. It does not follow that the research claim is correct, that the retained source is sufficient, or that a public release is safe. The lemma is almost embarrassingly simple, which is why it is useful. It stops the verifier from becoming a badge with better typography.\note{1}
 
-The implementation is intentionally ordinary Python. The repository contains a bundler, an offline verifier, schema files, daily roll-up tooling, a signed-transition profile generator that does not sign, and positive and negative fixtures. The test suite covers schema validity, hash mismatch, missing files, unsafe assurance wording, roll-up payload semantics, local anchor-chain validation, reviewer-report packets, and signed-transition profile payloads. A test run on 30 May 2026 completed 166 tests successfully.
+\mirror{} supports byte and schema replay, not truth, authorship, legal compliance, external timestamping, or regulated assurance.
+
+The implementation is intentionally ordinary Python. The repository contains a bundler, an offline verifier, schema files, daily roll-up tooling, a signed-transition profile generator that does not sign, and positive and negative fixtures. The test suite covers schema validity, hash mismatch, missing files, unsafe assurance wording, roll-up payload semantics, local anchor-chain validation, reviewer-report packets, and signed-transition profile payloads. A test run on 30 May 2026 completed 115 tests successfully.
 
 \begin{table}[!htbp]
 \centering
@@ -91,21 +93,55 @@ Anchor chain & A hash-linked JSONL sequence over retained local roll-up records.
 \caption{Interpretation boundaries for the current \mirror{} workflow. The table is intentionally negative as well as positive: the refusal column is part of the method.}
 \end{table}
 
-\section{Worked Case}
+\section{Worked Case: JANUS}
 
-The case study is the MIRROR lane inside a private Tyche Institute research workspace. The lane produced a schema, reference verifier, bundler, daily roll-up tool, examples, release-candidate notes, and a draft methodology paper. It also read sibling artifact indexes in read-only mode and wrote advisory tickets locally when rows were missing, stale, or internally conflicting. Those tickets were not sent to other projects and did not modify sibling lanes.
+Here JANUS names the laboratory case-study packet used to exercise \mirror{}: a multilingual drift-triage manuscript and data release for policy-adjacent research claims. It was selected because the public packet contains a 19-page manuscript, a source archive, a public data-and-code supplement, aggregate CSVs, plots, curated public edge-suite examples, scoring and plotting scripts, dependency metadata, final checks, and a release manifest. The private workspace also contains raw source claims, generated forward translations, generated back-translations, per-record reports, and operational notes that are not public-safe. That mixture makes JANUS useful for \mirror{}: the problem is not merely whether a file can be hashed, but how to keep a claim, the evidence for it, and the public boundary separate.
 
-The smallest successful example is a retained artifact plus one source file and one low-risk claim. Running the verifier on that bundle returns a machine-readable status:
+\subsection{Case setup}
 
-\begin{quote}\small
-\texttt{\{"errors": [], "status": "ok"\}}
-\end{quote}
+The JANUS artifact set used in this paper consisted of four public-safe packet files: the clean PDF, the source ZIP, the public data/code supplement ZIP, and the packet status note. The packet also retained source descriptors rather than private source copies: a SHA-256 manifest, the JANUS final-packet manifest, the row-level leakage scan, the supplement file manifest, and the clean-preprint status note. The public supplement contained 21 files: seven CSV files, six Python scripts, five PNG plots, two Markdown casebook files, and one \texttt{requirements.txt}. The scan reported public PASS for scanned CSV, text, and script surfaces; binary plots were marked as skipped by the content scanner; reviewer-only bundle material retained expected warnings and stayed out of the public release set.
 
-The smallest failure example changes a source byte after bundling. The verifier reports a hash mismatch and returns \texttt{fail}. That failure is not an accusation; it is a pointer. A reviewer can ask whether the edit was expected, whether the bundle should be regenerated, or whether the claim should be narrowed.
+The case therefore exercised the part of \mirror{} that matters most for research-software review: retaining enough evidence to replay the public packet, while refusing to publish raw claims or generated text that could be mistaken for authoritative translations.
 
-This failed case is intentionally plain. It models the common maintenance accident in which a retained source, scraped excerpt, or generated table is updated after the prose has already absorbed its earlier form. The interesting result is not that hashing detects the byte change. The interesting result is that the verifier keeps the discussion at the right level: ``which evidence moved, which claim depends on it, and what decision now belongs to the author or reviewer?'' A negative fixture therefore becomes a small rehearsal for peer review rather than a dramatic security incident.
+\subsection{MIRROR procedure applied to JANUS}
 
-Daily roll-ups add a second layer. They scan configured sibling indexes, normalize rows, compute local roots, and append anchor records whose \texttt{external\_timestamp} value remains null. That null is not a bug. It is a boundary marker: the local chain supports replay of retained local records, not an independent time claim. This makes \mirror{} adjacent to content provenance systems such as C2PA, software supply-chain attestations such as SLSA and in-toto, and signing ecosystems such as Sigstore, but it does not claim their trust model or public-log semantics (8-11).
+The \mirror{} pass treated the JANUS packet as a case artifact rather than as a proof target. It recorded the packet files and hashes, mapped manuscript claims to public-safe descriptors, checked that scripts and data were available for download, and separated replay evidence from scholarly judgment. The concrete actions were:
+
+\begin{enumerate}
+\item bundle the JANUS clean-preprint packet as the artifact under review;
+\item retain source descriptors for the manuscript, supplement, leakage scan, and hashes;
+\item hash retained bytes with SHA-256 and verify them against the packet manifest;
+\item map claims about data/code availability, public examples, and redaction boundaries to the packet files;
+\item run local tests and leakage scans;
+\item record positive outcomes, expected warnings, and unresolved release decisions;
+\item keep private raw claims, generated translations, back-translations, and operational notes outside the public case packet.
+\end{enumerate}
+
+This is where \mirror{} is most useful. It did not decide whether JANUS is a good multilingual method. It made the review surface more explicit: which public files exist, which claims cite them, what the verifier can replay, and which materials remain withheld.
+
+\subsection{JANUS findings}
+
+The final JANUS packet recorded four public-safe case artifacts and five source-descriptor records. The public supplement exposed 21 downloadable files and the source archive exposed the LaTeX source, bibliography, compiled bibliography, local style file, public edge-case table source, and the aggregate figure used in the paper. The JANUS test pass reported 49 unit tests. The PDF build had 19 pages, no undefined citations or references in the final log scan, and a checksum match against the clean-preprint SHA-256 file. The leakage scan found no public-tier findings in scanned CSV, text, or script surfaces. Four reviewer-only files retained expected warnings and were therefore not promoted to the public tier.
+
+The \mirror{} pass changed the manuscript and packet in three practical ways. First, the data-accessibility statement now names the public data/code supplement instead of describing it only abstractly. Second, the public supplement includes scripts and a dependency manifest, not only aggregate outputs. Third, self-referential public examples were replaced with domain-shaped edge examples so the case study shows translation-fragility surfaces rather than its own release machinery.
+
+The JANUS case shows that \mirror{} can make review evidence more inspectable, but it does not make JANUS true, complete, legally compliant, peer reviewed, or externally attested.
+
+\section{Edge Cases and Negative Results}
+
+The JANUS pass made five edge cases visible enough to discuss without exposing private text.
+
+\textbf{Stale or changed digest.} A clean packet is only clean for a specific byte sequence. If the PDF, source ZIP, or supplement ZIP changes after the manifest is written, \mirror{} can flag the mismatch. It cannot decide whether the change is harmless; it can only force the author to refresh the packet or narrow the claim.
+
+\textbf{Ambiguous claim-to-source mapping.} A statement such as ``the public supplement contains scripts'' is easy to support. A stronger statement such as ``the supplement fully reproduces the study'' is not supported by public JANUS materials, because private claims and generated translations remain withheld. \mirror{} helps by mapping the weaker claim to public files and leaving the stronger claim unsupported.
+
+\textbf{Private source excluded from public package.} The JANUS private corpus is intentionally absent. That absence is not a verifier failure. It is a release decision that must be visible, because public reproducibility is partial by design.
+
+\textbf{Verifier passes bytes but cannot validate truth.} A byte-perfect public casebook can still be a poor example, a misleading excerpt, or an overclaimed result. \mirror{} can preserve the file and the decision trail; it cannot validate the interpretation.
+
+\textbf{Evidence package too complete to publish.} A package that includes raw claims, generated translations, row identifiers, and operational notes may be excellent for internal review and unsafe for public release. The JANUS split therefore treats reviewer-only warnings as expected outcomes rather than defects to hide.
+
+Daily roll-ups add a related maintenance layer. They scan configured sibling indexes, normalize rows, compute local roots, and append anchor records whose \texttt{external\_timestamp} value remains null. That null is not a bug. It is a boundary marker: the local chain supports replay of retained local records, not an independent time claim. This makes \mirror{} adjacent to content provenance systems such as C2PA, software supply-chain attestations such as SLSA and in-toto, and signing ecosystems such as Sigstore, but it does not claim their trust model or public-log semantics (8-11).
 
 The same distinction matters vertically. \mirror{} uses SHA-256 as a conservative byte-integrity primitive under the Secure Hash Standard, not as an oracle about scholarly truth (12). Public-key infrastructure (PKI), the X.509 certificate profile, the European eIDAS trust-services regulation, and European Telecommunications Standards Institute (ETSI) AdES validation procedures live higher in the governance stack (13-15). \mirror{} prepares material that such systems could later sign, seal, time-stamp, or reject; it does not borrow their authority in advance.\note{3}
 
@@ -144,7 +180,7 @@ The fifth lesson is that future signing should be additive. The repository alrea
 
 The current case is a self-experiment. That is both a strength and a limitation. It gives unusually direct access to iteration history and design choices, but it does not show how independent teams would use the method, how reviewers would score its usefulness, or how it behaves across public repositories with different licensing and contribution cultures. The public-release surface now needs to be treated as part of the method: repository metadata, license text, citation metadata, reviewer instructions, release notes, and a minimal evidence package are not administrative extras; they are the first reproducibility claim the paper makes.
 
-The security claims are also narrow. SHA-256 digests support byte identity. JSON Schema supports structure. Local policy checks catch configured patterns of unsafe wording. None of these proves that a claim is right. The best interpretation is maintenance-oriented: \mirror{} helps make the next human review sharper, faster, and more reproducible.
+The security claims are also narrow. SHA-256 digests support byte identity. JSON Schema supports structure. Local policy checks catch configured patterns of unsafe wording. None of these establishes that a claim is right. The best interpretation is maintenance-oriented: \mirror{} helps make the next human review sharper, faster, and more reproducible.
 
 \section{Conclusion}
 
@@ -152,11 +188,13 @@ The security claims are also narrow. SHA-256 digests support byte identity. JSON
 
 \section*{Data Accessibility}
 
-The software, tests, fixtures, paper source, and minimal public-safe evidence package for this article are available in the Zenodo software record for MIRROR (16), DOI \url{https://doi.org/10.5281/zenodo.20463358}, under the Apache License 2.0. The minimal evidence package is included as \texttt{release/mirror-methodology-rc1/} inside the archived \texttt{v0.1.1} package.
+The MIRROR software, tests, fixtures, paper source, and minimal public-safe evidence package are archived on Zenodo under the Apache License 2.0: \url{https://doi.org/10.5281/zenodo.20463358} (16). The minimal evidence package is included as \texttt{release/mirror-methodology-rc1/} inside the archived \texttt{v0.1.1} package.
+
+The JANUS case is reported as a public-safe worked example. Private workspace paths, unpublished third-party material, raw source claims, generated translations, back-translations, per-record reports, and operational notes were excluded from the public package. If the JANUS packet is later deposited separately, its DOI should be added here rather than replaced by a personal repository URL.
 
 \section*{Ethics and Consent}
 
-The case study uses the author's own local research workspace and software artifacts. It does not report human-subjects data, private third-party data, customer data, or employer-confidential material. The public version must preserve that boundary by excluding private paths, unpublished third-party source material, and any text that implies operational access to external systems.
+The case study uses the author's own local research workspace and software artifacts. It does not report human-subjects data, private third-party data, customer data, or employer-confidential material. The public version preserves that boundary by excluding private paths, unpublished third-party source material, and any text that implies operational access to external systems.
 
 \section*{Funding Information}
 
@@ -172,7 +210,7 @@ Anton Sokolov designed the MIRROR workflow, implemented or supervised the local 
 
 \section*{AI Assistance Disclosure}
 
-Author used OpenAI Codex model GPT5.5 for final draft polishing. The author remains responsible for all claims, references, omissions, and decisions.
+Author used generative OpenAI Codex / GPT5.5 for final draft polishing. Final responsibility rests with the author, who verified all claims, results, design decisions, and references. Reported per COPE and ICMJE recommendations.
 
 \section*{Notes}
 

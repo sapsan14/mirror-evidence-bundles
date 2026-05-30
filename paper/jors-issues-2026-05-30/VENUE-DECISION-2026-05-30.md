@@ -2,7 +2,7 @@
 
 Selected working route: **Journal of Open Research Software (JORS), Issues in Research Software**.
 
-Status: public-release preprint route. No external venue submission, Zenodo/OSF DOI deposit, signature, timestamp, or editor contact was performed in this gate.
+Status: public-release route. No external venue submission, signature, timestamp, or editor contact was performed in this gate.
 
 ## Why this venue
 
@@ -30,7 +30,7 @@ Observed style: compact title page, direct abstract, numbered sections, display 
 
 ## Rejected routes
 
-- **JOSS**: too short and too software-paper-specific for the current narrative; better only after the public release has independent user-facing documentation, a DOI archive, and a clearer software reuse story.
+- **JOSS**: too short and too software-paper-specific for the current narrative; better only after the public release has independent user-facing documentation and a clearer software reuse story.
 - **Data & Policy**: topically adjacent, but the vault already has active Data & Policy traffic nearby; MIRROR would also need a stronger policy audience rewrite.
 - **DTRAP / security venues**: possible later if MIRROR is reframed around artifact-evaluation security or signed handoff, but the current paper is research-software practice rather than threat research.
 

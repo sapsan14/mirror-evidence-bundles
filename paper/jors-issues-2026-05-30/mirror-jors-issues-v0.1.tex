@@ -39,14 +39,11 @@
 
 \begin{center}
 {\LARGE \textbf{\mirror{}: Local Evidence Bundles for Reproducible Research Software Review}}\\[4pt]
-{\large Issues in Research Software preprint candidate, v0.1}\\[8pt]
 Anton Sokolov\\
 Researcher, Tyche Institute, Tallinn, Estonia\\
 ORCID: 0000-0003-2452-7096\\[4pt]
 30 May 2026
 \end{center}
-
-\textbf{Status.} Public-release preprint preview. Not peer reviewed, with no external venue submission, DOI deposit, signature, or timestamp.
 
 \begin{abstract}
 \mirror{} is a small research-software method for keeping drafts, scripts, source copies, and claim records reviewable while an iterative research project is still moving. A \mirror{} bundle places an artifact, structured claims, provenance notes, source descriptors or retained source copies, assumptions, and SHA-256 digests into a local directory that can be verified offline. This article reports the design as an experience paper for research software practice. Its central claim is deliberately narrow: byte-level replay and schema conformance can reduce the cost of later review, but they do not establish truth, completeness, authorship, legal compliance, public release authority, or regulated trust-service status. The case study is a private local workspace in which autonomous workers and human review produced draft papers, evidence packages, and daily roll-ups. The current implementation passed 166 local tests and a set of positive and negative verifier fixtures, including expected failures for hash mismatches and unsafe assurance language. The main contribution is not another assurance badge, but a boundary discipline: a reviewer should be able to ask what bytes were retained, which claim points to which evidence, what failed, and what still requires human judgment.
@@ -59,8 +56,6 @@ ORCID: 0000-0003-2452-7096\\[4pt]
 Research software often fails quietly before it fails technically. A script still runs, but the draft that cites it has changed. A source was once available, but the retained copy is missing. A table is regenerated, but the claim it supports remains stronger than the evidence. In small projects this is annoying; in AI-governance and evidence-infrastructure work it becomes a methodological risk, because language such as ``verified'', ``attested'', or ``compliant'' can drift faster than the underlying evidence.
 
 \mirror{} started from that practical problem. It is not a new cryptographic primitive and not a replacement for repositories, archives, Research Object Crate (RO-Crate), PROV, software citation, or artifact evaluation practices (1-7). It is a deliberately modest layer that can be used before a project is ready for public release: gather the artifact, the retained evidence, the claims, and the assumptions into one replayable directory; then let an offline verifier answer only the question it is qualified to answer. Did the retained bytes and declared structure survive?
-
-The venue fit for this preprint is the \emph{Issues in Research Software} section of the Journal of Open Research Software (JORS). That section accepts experience reports and longer-form articles about creating, maintaining, and evaluating open source research software, asks for an abstract, encourages display items, uses Vancouver-style references, and suggests roughly 3000-4000 words (8). Recent JORS experience and policy papers use compact framing, explicit lessons, and back-matter statements rather than a heavy conference template (9-12). This draft follows that pattern while preserving one important caveat: the software and minimal public-safe evidence package must be easier to inspect than the prose that describes them.\note{1}
 
 \section{Method}
 
@@ -76,7 +71,7 @@ V(B)=\mathrm{ok} \Longleftrightarrow
 \]
 where \(H\) is SHA-256 and \(\mathrm{policy}\) is a local guardrail over configured wording and pointer rules.
 
-\textbf{Lemma 1: Byte replay is not claim truth.} If \(V(B)=\mathrm{ok}\), then the retained local files match the recorded hashes and schemas. It does not follow that the research claim is correct, that the retained source is sufficient, or that a public release is safe. The lemma is almost embarrassingly simple, which is why it is useful. It stops the verifier from becoming a badge with better typography.\note{2}
+\textbf{Lemma 1: Byte replay is not claim truth.} If \(V(B)=\mathrm{ok}\), then the retained local files match the recorded hashes and schemas. It does not follow that the research claim is correct, that the retained source is sufficient, or that a public release is safe. The lemma is almost embarrassingly simple, which is why it is useful. It stops the verifier from becoming a badge with better typography.\note{1}
 
 The implementation is intentionally ordinary Python. The repository contains a bundler, an offline verifier, schema files, daily roll-up tooling, a signed-transition profile generator that does not sign, and positive and negative fixtures. The test suite covers schema validity, hash mismatch, missing files, unsafe assurance wording, roll-up payload semantics, local anchor-chain validation, reviewer-report packets, and signed-transition profile payloads. A test run on 30 May 2026 completed 166 tests successfully.
 
@@ -110,9 +105,9 @@ The smallest failure example changes a source byte after bundling. The verifier 
 
 This failed case is intentionally plain. It models the common maintenance accident in which a retained source, scraped excerpt, or generated table is updated after the prose has already absorbed its earlier form. The interesting result is not that hashing detects the byte change. The interesting result is that the verifier keeps the discussion at the right level: ``which evidence moved, which claim depends on it, and what decision now belongs to the author or reviewer?'' A negative fixture therefore becomes a small rehearsal for peer review rather than a dramatic security incident.
 
-Daily roll-ups add a second layer. They scan configured sibling indexes, normalize rows, compute local roots, and append anchor records whose \texttt{external\_timestamp} value remains null. That null is not a bug. It is a boundary marker: the local chain supports replay of retained local records, not an independent time claim. This makes \mirror{} adjacent to content provenance systems such as C2PA, software supply-chain attestations such as SLSA and in-toto, and signing ecosystems such as Sigstore, but it does not claim their trust model or public-log semantics (13-16).
+Daily roll-ups add a second layer. They scan configured sibling indexes, normalize rows, compute local roots, and append anchor records whose \texttt{external\_timestamp} value remains null. That null is not a bug. It is a boundary marker: the local chain supports replay of retained local records, not an independent time claim. This makes \mirror{} adjacent to content provenance systems such as C2PA, software supply-chain attestations such as SLSA and in-toto, and signing ecosystems such as Sigstore, but it does not claim their trust model or public-log semantics (8-11).
 
-The same distinction matters vertically. \mirror{} uses SHA-256 as a conservative byte-integrity primitive under the Secure Hash Standard, not as an oracle about scholarly truth (17). Public-key infrastructure (PKI), the X.509 certificate profile, the European eIDAS trust-services regulation, and European Telecommunications Standards Institute (ETSI) AdES validation procedures live higher in the governance stack (18-20). \mirror{} prepares material that such systems could later sign, seal, time-stamp, or reject; it does not borrow their authority in advance.\note{4}
+The same distinction matters vertically. \mirror{} uses SHA-256 as a conservative byte-integrity primitive under the Secure Hash Standard, not as an oracle about scholarly truth (12). Public-key infrastructure (PKI), the X.509 certificate profile, the European eIDAS trust-services regulation, and European Telecommunications Standards Institute (ETSI) AdES validation procedures live higher in the governance stack (13-15). \mirror{} prepares material that such systems could later sign, seal, time-stamp, or reject; it does not borrow their authority in advance.\note{3}
 
 \begin{table}[!htbp]
 \centering
@@ -141,7 +136,7 @@ The third lesson is that failures should stay boring. A hash mismatch may be imp
 
 The fourth lesson is that local evidence packages help precisely because they are weaker than public attestations. A private workspace cannot always publish every source, copy every page, or expose every intermediate file. \mirror{} can still improve the situation by recording retained bytes, descriptors, assumptions, and blocked-publication notes. That is less glamorous than a public cryptographic log, but it is available at the moment when many mistakes are still cheap to fix.
 
-The fifth lesson is that future signing should be additive. The repository already includes a signed-transition profile generator that hashes an unsigned bundle and a reviewer-report packet, then writes a profile for later operator-controlled signing. It performs no signing itself. This keeps EATF-style or other attestation layers separate from the local replay substrate.\note{3}
+The fifth lesson is that future signing should be additive. The repository already includes a signed-transition profile generator that hashes an unsigned bundle and a reviewer-report packet, then writes a profile for later operator-controlled signing. It performs no signing itself. This keeps Agent Trust Framework (EATF)-style attestation layers separate from the local replay substrate (17).\note{2}
 
 \section{Limitations and Threat Model}
 
@@ -155,11 +150,9 @@ The security claims are also narrow. SHA-256 digests support byte identity. JSON
 
 \mirror{} is a small answer to a common research-software problem: evidence moves, claims harden, and later reviewers inherit a pile of plausible files. The method binds artifacts, sources, claims, notes, and digests into an offline packet, then insists on a modest interpretation of the result. That modesty is the point. A useful verifier should help a reviewer challenge a claim without pretending to decide the claim.
 
-For JORS, the strongest version of this article is an experience report about research software maintenance under uncertainty. Its practical contribution is a workflow and vocabulary for local evidence bundles before public release; its theoretical contribution is a clean separation between byte replay and scholarly judgment. The next step is not stronger prose. It is the remaining publication hygiene that the paper itself demands: a DOI archive if the venue or reviewers expect one, and a final check that the public release still says less, not more, than the verifier can prove.
-
 \section*{Data Accessibility}
 
-The software, tests, fixtures, and minimal public-safe evidence package for this preprint are available in the public release repository at \url{https://github.com/sapsan14/mirror-evidence-bundles} under the Apache License 2.0. The minimal evidence package is in \texttt{release/mirror-methodology-rc1/}; the current release target is \texttt{v0.1.0-jors-preprint}. No Zenodo, OSF, or journal DOI is claimed in this PDF. If a DOI archive is created before journal submission, this statement should be updated to cite the DOI rather than the GitHub URL alone.
+The software, tests, fixtures, and minimal public-safe evidence package for this article are available in the public release repository at \url{https://github.com/sapsan14/mirror-evidence-bundles} under the Apache License 2.0 and are archived on Zenodo (16). The minimal evidence package is in \texttt{release/mirror-methodology-rc1/}; the archived release target is \texttt{v0.1.0}.
 
 \section*{Ethics and Consent}
 
@@ -179,17 +172,15 @@ Anton Sokolov designed the MIRROR workflow, implemented or supervised the local 
 
 \section*{AI Assistance Disclosure}
 
-This preprint was prepared with substantive generative-AI assistance. The venue-selection, restructuring, reference triage, and final preprint build were assisted by OpenAI Codex in dialogue with the author, using local project files and public venue/source checks. The author remains responsible for all claims, references, omissions, and the decision whether any public submission is appropriate.
+Author used OpenAI Codex model GPT5.5 for final draft polishing. The author remains responsible for all claims, references, omissions, and decisions.
 
 \section*{Notes}
 
-1. JORS software metapapers require freely available software in a public repository. The present draft is routed instead to the JORS \emph{Issues in Research Software} article type, but public code, license, and archive decisions still matter because the article introduces a software method.
+1. A hash is wonderfully stubborn about bytes and wonderfully silent about meaning. That is a feature only if the paper says so plainly.
 
-2. A hash is wonderfully stubborn about bytes and wonderfully silent about meaning. That is a feature only if the paper says so plainly.
+2. EATF means Agent Trust Framework: an evidence and agent-attestation framework that can later sign or publish a handoff payload. The current MIRROR workflow does not claim that such signing has occurred.
 
-3. EATF here means an evidence or agent attestation framework layer that could later sign or publish a handoff payload. The current MIRROR preprint does not claim that such signing has occurred.
-
-4. PKI here means public-key infrastructure: the people, policies, certificates, keys, revocation records, software, and institutional habits that make a signature mean more than ``some private key produced these bytes''. The cryptography is hard; the governance is where it quietly becomes interesting.
+3. PKI here means public-key infrastructure: the people, policies, certificates, keys, revocation records, software, and institutional habits that make a signature mean more than ``some private key produced these bytes''. The cryptography is hard; the governance is where it quietly becomes interesting.
 
 \section*{References}
 
@@ -207,30 +198,24 @@ This preprint was prepared with substantive generative-AI assistance. The venue-
 
 7. Association for Computing Machinery. Artifact Review and Badging Version 1.1. ACM Publications Policy; 2020 Aug 24. Available from: \url{https://www.acm.org/publications/policies/artifact-review-and-badging-current}.
 
-8. Journal of Open Research Software. Submission Guidelines. Ubiquity Press; cited 2026 May 30. Available from: \url{https://openresearchsoftware.metajnl.com/about/submissions}.
+8. Supply-chain Levels for Software Artifacts. SLSA specification version 1.2. Linux Foundation; cited 2026 May 30. Available from: \url{https://slsa.dev/spec/v1.2/}.
 
-9. Fehr J, Himpe C, Rave S, Saak J. Sustainable Research Software Hand-Over. Journal of Open Research Software. 2021;9(1):5. DOI: \url{https://doi.org/10.5334/jors.307}.
+9. Torres-Arias S, Afzali H, Kuppusamy TK, Curtmola R, Cappos J. in-toto: Providing farm-to-table guarantees for bits and bytes. In: Proceedings of the 28th USENIX Security Symposium; 2019; Santa Clara, CA. Available from: \url{https://www.usenix.org/conference/usenixsecurity19/presentation/torres-arias}.
 
-10. Lamprecht AL, Martinez-Ortiz C, Barker M, Bartholomew SL, Barton J, Chue Hong N, et al. What Do We (Not) Know About Research Software Engineering? Journal of Open Research Software. 2022;10(1):10. DOI: \url{https://doi.org/10.5334/jors.384}.
+10. Coalition for Content Provenance and Authenticity. C2PA Specifications 2.1. Joint Development Foundation; cited 2026 May 30. Available from: \url{https://spec.c2pa.org/specifications/specifications/2.1/index.html}.
 
-11. Katz DS, Druskat S, Haines R, Jay C, Struck A. The State of Sustainable Research Software: Learning from the Workshop on Sustainable Software for Science: Practice and Experiences (WSSSPE5.1). Journal of Open Research Software. 2019;7(1):11. DOI: \url{https://doi.org/10.5334/jors.242}.
+11. Sigstore. Overview. OpenSSF / Linux Foundation; cited 2026 May 30. Available from: \url{https://docs.sigstore.dev/}.
 
-12. Barker M, Cohen J, Hernandez Serrano P, Katz DS, Martin K, Rudmann D, Shanahan H. Institutional Policy Pathways for Supporting Research Software: Global Trends and Local Practices. Journal of Open Research Software. 2025;13:39. DOI: \url{https://doi.org/10.5334/jors.625}.
+12. National Institute of Standards and Technology. Secure Hash Standard (SHS), FIPS PUB 180-4. Gaithersburg, MD: NIST; 2015 Aug. DOI: \url{https://doi.org/10.6028/NIST.FIPS.180-4}.
 
-13. Supply-chain Levels for Software Artifacts. SLSA specification version 1.2. Linux Foundation; cited 2026 May 30. Available from: \url{https://slsa.dev/spec/v1.2/}.
+13. Cooper D, Santesson S, Farrell S, Boeyen S, Housley R, Polk W. Internet X.509 Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile. RFC 5280. IETF; 2008 May. DOI: \url{https://doi.org/10.17487/RFC5280}.
 
-14. Torres-Arias S, Afzali H, Kuppusamy TK, Curtmola R, Cappos J. in-toto: Providing farm-to-table guarantees for bits and bytes. In: Proceedings of the 28th USENIX Security Symposium; 2019; Santa Clara, CA. Available from: \url{https://www.usenix.org/conference/usenixsecurity19/presentation/torres-arias}.
+14. European Parliament and Council. Regulation (EU) No 910/2014 on electronic identification and trust services for electronic transactions in the internal market and repealing Directive 1999/93/EC. Official Journal of the European Union. 2014;L257:73-114. Available from: \url{https://eur-lex.europa.eu/eli/reg/2014/910/oj/eng}.
 
-15. Coalition for Content Provenance and Authenticity. C2PA Specifications 2.1. Joint Development Foundation; cited 2026 May 30. Available from: \url{https://spec.c2pa.org/specifications/specifications/2.1/index.html}.
+15. ETSI. ETSI EN 319 102-1 V1.4.1: Electronic Signatures and Infrastructures (ESI); Procedures for Creation and Validation of AdES Digital Signatures; Part 1: Creation and Validation. Sophia Antipolis: ETSI; 2024 Jun. Available from: \url{https://www.etsi.org/deliver/etsi_en/319100_319199/31910201/01.04.01_60/en_31910201v010401p.pdf}.
 
-16. Sigstore. Overview. OpenSSF / Linux Foundation; cited 2026 May 30. Available from: \url{https://docs.sigstore.dev/}.
+16. Sokolov A. MIRROR: Local Evidence Bundles for Reproducible Research Software Review. Zenodo; 2026. DOI: \url{https://doi.org/10.5281/zenodo.20462185}.
 
-17. National Institute of Standards and Technology. Secure Hash Standard (SHS), FIPS PUB 180-4. Gaithersburg, MD: NIST; 2015 Aug. DOI: \url{https://doi.org/10.6028/NIST.FIPS.180-4}.
-
-18. Cooper D, Santesson S, Farrell S, Boeyen S, Housley R, Polk W. Internet X.509 Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile. RFC 5280. IETF; 2008 May. DOI: \url{https://doi.org/10.17487/RFC5280}.
-
-19. European Parliament and Council. Regulation (EU) No 910/2014 on electronic identification and trust services for electronic transactions in the internal market and repealing Directive 1999/93/EC. Official Journal of the European Union. 2014;L257:73-114. Available from: \url{https://eur-lex.europa.eu/eli/reg/2014/910/oj/eng}.
-
-20. ETSI. ETSI EN 319 102-1 V1.4.1: Electronic Signatures and Infrastructures (ESI); Procedures for Creation and Validation of AdES Digital Signatures; Part 1: Creation and Validation. Sophia Antipolis: ETSI; 2024 Jun. Available from: \url{https://www.etsi.org/deliver/etsi_en/319100_319199/31910201/01.04.01_60/en_31910201v010401p.pdf}.
+17. EATF. Documentation: Agent Trust Framework. EATF; cited 2026 May 30. Available from: \url{https://www.eatf.eu/docs}.
 
 \end{document}

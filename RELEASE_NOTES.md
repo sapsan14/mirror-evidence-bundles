@@ -1,11 +1,11 @@
 # MIRROR release notes
 
-## v0.1.0-jors-preprint
+## v0.1.0
 
 Date: 2026-05-30
 
-This release prepares MIRROR for public review as a JORS Issues in Research
-Software preprint candidate.
+This release prepares MIRROR for public review as a research-software article
+and evidence-bundle case study.
 
 Included:
 
@@ -14,12 +14,12 @@ Included:
   profiles.
 - Positive and negative fixtures, including a deliberate hash-mismatch case.
 - Minimal public-safe evidence package in `release/mirror-methodology-rc1/`.
-- JORS Issues preprint candidate in `paper/jors-issues-2026-05-30/`.
+- Article manuscript and source in `paper/jors-issues-2026-05-30/`.
 - Athena, Argus, and Kalliope review-gate reports for the preprint.
 
 Known limits:
 
 - MIRROR does not sign, notarize, timestamp, certify, or establish legal
   compliance.
-- The first Zenodo DOI remains pending until the public release is archived.
+- Zenodo DOI: `10.5281/zenodo.20462185`.
 - No independent user study is claimed in this release.

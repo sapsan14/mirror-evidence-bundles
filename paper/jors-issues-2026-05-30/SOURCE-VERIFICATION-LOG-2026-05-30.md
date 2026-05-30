@@ -46,5 +46,5 @@ Status: public web/source check for the JORS-shaped MIRROR preprint. This log re
 
 - Public release metadata was added after the first local preprint build: Apache License 2.0, `README.md`, `CITATION.cff`, `.zenodo.json`, `codemeta.json`, contributor notes, reviewer guide, and release notes.
 - The intended public release repository is `https://github.com/sapsan14/mirror-evidence-bundles`.
-- No Zenodo or OSF DOI is asserted in the paper until an external deposit is actually published.
+- Zenodo DOI reserved for the public release package: `10.5281/zenodo.20462185`.
 - JORS route remains a preprint route until venue submission, cover letter, reviewer suggestions, and any DOI-deposit decision are finalized.

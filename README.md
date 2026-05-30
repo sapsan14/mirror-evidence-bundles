@@ -52,6 +52,8 @@ MIRROR is released under the Apache License 2.0. See `LICENSE`.
 
 ## Citation
 
-Please cite the public release repository using `CITATION.cff`. A Zenodo DOI is
-planned for the first public release archive; until that DOI exists, cite the
-public GitHub release URL and the release tag.
+Please cite the public release using `CITATION.cff`:
+
+```text
+https://doi.org/10.5281/zenodo.20462185
+```

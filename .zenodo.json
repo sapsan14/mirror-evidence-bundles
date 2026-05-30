@@ -10,7 +10,7 @@
     }
   ],
   "license": "Apache-2.0",
-  "version": "v0.1.0",
+  "version": "v0.1.1",
   "keywords": [
     "research software",
     "reproducibility",
@@ -18,12 +18,5 @@
     "evidence bundles",
     "artifact review",
     "software sustainability"
-  ],
-  "related_identifiers": [
-    {
-      "identifier": "https://github.com/sapsan14/mirror-evidence-bundles/releases/tag/v0.1.0",
-      "relation": "isSupplementTo",
-      "scheme": "url"
-    }
   ]
 }

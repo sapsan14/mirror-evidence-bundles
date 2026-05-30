@@ -1,6 +1,6 @@
 # MIRROR source verification log, 2026-05-30
 
-Status: public web/source check for the JORS-shaped MIRROR preprint. This log records what was checked and how it is used. It is not a submission record.
+Status: public web/source check for the JORS-shaped MIRROR article package. This log records what was checked and how it is used. It is not a venue submission record.
 
 ## Venue and sample papers
 
@@ -44,7 +44,7 @@ Status: public web/source check for the JORS-shaped MIRROR preprint. This log re
 
 ## Known source limits
 
-- Public release metadata was added after the first local preprint build: Apache License 2.0, `README.md`, `CITATION.cff`, `.zenodo.json`, `codemeta.json`, contributor notes, reviewer guide, and release notes.
-- The intended public release repository is `https://github.com/sapsan14/mirror-evidence-bundles`.
-- Zenodo DOI reserved for the public release package: `10.5281/zenodo.20462185`.
-- JORS route remains a preprint route until venue submission, cover letter, reviewer suggestions, and any DOI-deposit decision are finalized.
+- Public release metadata was added after the first local article build: Apache License 2.0, `README.md`, `CITATION.cff`, `.zenodo.json`, `codemeta.json`, contributor notes, reviewer guide, and release notes.
+- The canonical public software record is `https://zenodo.org/records/20463358`.
+- Zenodo DOI published for the public release package: `10.5281/zenodo.20463358`, record `https://zenodo.org/records/20463358`.
+- JORS route remains an article-submission route until venue submission, cover letter, and reviewer suggestions are finalized.

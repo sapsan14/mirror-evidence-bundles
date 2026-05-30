@@ -22,7 +22,7 @@ BUNDLE_SCHEMA_ID = "urn:tyche:mirror:bundle:0.1"
 CLAIMS_SCHEMA_ID = "urn:tyche:mirror:claims:0.1"
 SCHEMA_VERSION = "0.1.0"
 TOOL_NAME = "bundle.py"
-TOOL_VERSION = "0.1.0"
+TOOL_VERSION = "0.1.1"
 SAFE_COMPATIBILITY_STATEMENT = (
     "This MIRROR bundle records reproducible provenance for research artifacts. "
     "It is unsigned and is not a qualified electronic signature, qualified "

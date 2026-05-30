@@ -1,6 +1,6 @@
 # Athena sentence check, 2026-05-30
 
-Verdict: PASS for local preprint preview.
+Verdict: PASS for local article preview.
 
 Scope: sentence-by-sentence reading of `mirror-jors-issues-v0.1.tex` against the rendered PDF. The report is grouped by paper section to stay readable; the pass itself was performed at sentence level.
 

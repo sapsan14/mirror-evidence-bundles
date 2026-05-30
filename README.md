@@ -11,14 +11,16 @@ external timestamping, or regulated assurance.
 
 ## Public release surface
 
-The public release package for journal and thesis review is:
+The canonical public release package for journal and thesis review is the
+Zenodo software record:
 
 ```text
-https://github.com/sapsan14/mirror-evidence-bundles
+https://doi.org/10.5281/zenodo.20463358
 ```
 
-That repository is the safe public surface. This working repository may contain
-local development notes that are not part of the public evidence package.
+That archived package is the safe public surface. This working repository may
+contain local development notes that are not part of the public evidence
+package.
 
 ## Contents
 
@@ -30,9 +32,9 @@ local development notes that are not part of the public evidence package.
 - `schema/` contains JSON Schemas for bundle and report structures.
 - `examples/` contains positive and negative fixtures.
 - `release/mirror-methodology-rc1/` contains the minimal public-safe evidence
-  package used by the preprint.
-- `paper/jors-issues-2026-05-30/` contains the current JORS Issues preprint
-  candidate, build manifest, source checks, and review-gate reports.
+  package used by the article.
+- `paper/jors-issues-2026-05-30/` contains the current JORS Issues article
+  package, build manifest, source checks, and review-gate reports.
 
 ## Quick check
 
@@ -55,5 +57,5 @@ MIRROR is released under the Apache License 2.0. See `LICENSE`.
 Please cite the public release using `CITATION.cff`:
 
 ```text
-https://doi.org/10.5281/zenodo.20462185
+https://doi.org/10.5281/zenodo.20463358
 ```

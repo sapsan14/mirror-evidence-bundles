@@ -1,6 +1,6 @@
 # Kalliope final polish, 2026-05-30
 
-Verdict: PASS for clean preprint preview.
+Verdict: PASS for clean article preview.
 
 ## Prose and tone
 

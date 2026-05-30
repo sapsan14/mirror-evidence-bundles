@@ -13,8 +13,7 @@ interesting than a short software announcement.
 
 | Target | Use | Recommendation |
 |---|---|---|
-| GitHub public release | Public code, license, tests, minimal evidence package, paper source/PDF | Do now from a sanitized public repository. |
-| Zenodo | Versioned software/evidence DOI for citation and Data Accessibility | Do next, after checking the public release archive. Preferred DOI route. |
+| Zenodo | Public code, license, tests, minimal evidence package, paper source/PDF, versioned software/evidence DOI | Canonical public access point for citation and Data Accessibility. |
 | OSF / MetaArXiv | Manuscript preprint and discussion surface | Optional. Use only if public preprint circulation helps the JORS route. |
 | Software Heritage | Long-term code preservation | Nice additional archive after the public repository is stable. |
 
@@ -30,5 +29,5 @@ Zenodo DOI. Otherwise JANUS inherits a weak sentence: it would be relying on an
 unpublished local method to support a reproducibility claim.
 
 Athena recommendation: make MIRROR public before JANUS submission if JANUS uses
-MIRROR in any methodological or evidentiary sentence. Cite the GitHub release
-immediately; replace with Zenodo DOI once minted.
+MIRROR in any methodological or evidentiary sentence. Cite the Zenodo DOI:
+`10.5281/zenodo.20463358`.

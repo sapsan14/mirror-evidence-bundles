@@ -30,21 +30,22 @@ Observed style: compact title page, direct abstract, numbered sections, display 
 
 ## Rejected routes
 
-- **JOSS**: too short and too software-paper-specific for the current narrative; better only after the public release has independent user-facing documentation and a clearer software reuse story.
+- **JOSS**: plausible for a shorter companion software paper if rewritten into the JOSS Markdown structure and centered on installable, reusable MIRROR software. It is weaker for the current essay because the present contribution is methodological rather than only software availability.
+- **Software Impacts**: plausible for a short companion impact article after the release DOI, because the journal expects compact software impact papers. It would need a sharper impact-overview paragraph and less thesis-style argument.
 - **Data & Policy**: topically adjacent, but the vault already has active Data & Policy traffic nearby; MIRROR would also need a stronger policy audience rewrite.
 - **DTRAP / security venues**: possible later if MIRROR is reframed around artifact-evaluation security or signed handoff, but the current paper is research-software practice rather than threat research.
 
 ## Before real submission
 
 1. Keep JORS Issues as the primary venue.
-2. Publish and verify the sanitized public repository surface.
-3. Create a Zenodo software DOI when Anton confirms the final public release archive.
+2. Publish and verify the sanitized Zenodo software archive.
+3. Use the published Zenodo software DOI in the Data Accessibility and citation statements.
 4. Use OSF/MetaArXiv only for the manuscript preprint if a preprint-first route is strategically useful.
 5. Prepare a cover letter and three reviewer suggestions.
 6. Run Argus again after the DOI, if any, is known.
 
 ## Deposit route
 
-- **Zenodo**: preferred for software and evidence-package DOI because it works well with GitHub releases and software citation metadata.
+- **Zenodo**: preferred for software and evidence-package DOI because it gives the article a stable archived access point and software citation metadata. Published DOI: `10.5281/zenodo.20463358`.
 - **OSF / MetaArXiv**: preferred for manuscript preprints, not for the canonical software archive. Use only if public preprint circulation is desired before journal review.
 - **Software Heritage**: useful as an additional long-term code archive after the public repository is stable, but not a replacement for the Data Accessibility URL/DOI.

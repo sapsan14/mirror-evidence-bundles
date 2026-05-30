@@ -1,6 +1,6 @@
 [project]
 name = "mirror"
-version = "0.1.0"
+version = "0.1.1"
 description = "MIRROR evidence-bundle reference tooling"
 requires-python = ">=3.12"
 dependencies = [

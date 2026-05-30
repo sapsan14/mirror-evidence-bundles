@@ -1,0 +1,19 @@
+{
+  "claims": [
+    {
+      "evidence": [
+        {
+          "pointer": "../outside.txt",
+          "source_id": "S-0001"
+        }
+      ],
+      "id": "C-0001",
+      "notes": "Negative conformance fixture: evidence pointer deliberately escapes the bundle.",
+      "risk": "medium",
+      "safe_wording": "Claim with unsafe evidence pointer.",
+      "text": "Claim with unsafe evidence pointer."
+    }
+  ],
+  "schema": "urn:tyche:mirror:claims:0.1",
+  "schema_version": "0.1.0"
+}

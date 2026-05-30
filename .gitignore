@@ -1,0 +1,16 @@
+# re-clonable / regenerable — excluded from backup
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+node_modules/
+.pnpm-store/
+vendor/
+.DS_Store
+*.tmp
+*.swp

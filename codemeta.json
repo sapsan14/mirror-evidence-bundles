@@ -1,0 +1,29 @@
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+  "@type": "SoftwareSourceCode",
+  "name": "MIRROR",
+  "description": "Local evidence-bundle reference tooling for reproducible research software review.",
+  "codeRepository": "https://github.com/sapsan14/mirror-evidence-bundles",
+  "license": "https://spdx.org/licenses/Apache-2.0",
+  "version": "0.1.0",
+  "datePublished": "2026-05-30",
+  "programmingLanguage": "Python",
+  "runtimePlatform": "Python >=3.12",
+  "author": {
+    "@type": "Person",
+    "givenName": "Anton",
+    "familyName": "Sokolov",
+    "@id": "https://orcid.org/0000-0003-2452-7096",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "Tyche Institute"
+    }
+  },
+  "keywords": [
+    "research software",
+    "reproducibility",
+    "provenance",
+    "evidence bundles",
+    "artifact review"
+  ]
+}

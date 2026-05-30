@@ -1,0 +1,12 @@
+{
+  "accessed": "2026-05-19",
+  "http_status": null,
+  "notes": "Local file copied into the bundle.",
+  "original_path": "examples/bad-unsafe-assurance/source-note.txt",
+  "retrieved_by": "bundle.py 0.1.0",
+  "sha256": {
+    "algorithm": "SHA-256",
+    "value": "b293511207f8a69a0e557a0546e2e9cfc62bac58c4d7a76017378d2ad15f6651"
+  },
+  "source_id": "S-0001"
+}

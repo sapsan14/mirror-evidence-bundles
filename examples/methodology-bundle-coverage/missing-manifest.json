@@ -1,0 +1,12 @@
+{
+  "bundle": "paper/methodology.md.bundle",
+  "covered": [],
+  "covered_count": 0,
+  "missing": [
+    "paper/methodology.md.bundle/manifest.json"
+  ],
+  "missing_count": 1,
+  "required_count": 1,
+  "safe_interpretation": "This summary reports local methodology-bundle source coverage for semantic fixtures only; it does not certify sibling-lane completeness, publication readiness, audit status, or legal/regulatory status.",
+  "status": "fail"
+}

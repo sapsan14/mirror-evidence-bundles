@@ -1,0 +1,12 @@
+{
+  "created": "2026-05-19T09:00:03+03:00",
+  "date": "2026-05-19",
+  "entry_count": 158,
+  "external_timestamp": null,
+  "merkle_root": "4fbea41421e10958998293ebe68134a4f71efe08ca3ca7986238af9f7c160eeb",
+  "note": "Local research anchor only; no external timestamping or regulated trust service is performed.",
+  "previous_anchor_hash": "e45d5389a577ad2919d89d00ef711b1e9ceb012c91723d29e5b2db97ea9d67b7",
+  "rollup_path": "daily-roll-up/2026-05-19.json",
+  "rollup_sha256": "2727a057e62df1bac1fa09ecc0b4ca6677f310cc202a0a30f11956f457307b8d",
+  "schema": "mirror.daily-anchor.v0.1"
+}

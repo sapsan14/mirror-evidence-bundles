@@ -1,0 +1,1 @@
+This local source note supports the known-good MIRROR example artifact.

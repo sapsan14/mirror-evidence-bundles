@@ -1,0 +1,242 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "urn:tyche:mirror:roll-up-cli-payload:0.1",
+  "title": "MIRROR roll-up CLI payload conformance fixture schema",
+  "description": "Schema for the local conformance fixture that documents default update_daily_rollup.py JSON payload fields. This schema describes local replay and triage metadata only; it does not certify sibling-lane completeness, publication readiness, legal compliance, or external timestamp semantics.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "description",
+    "required_fields",
+    "field_types",
+    "diagnostic_summary_example",
+    "safe_interpretation"
+  ],
+  "properties": {
+    "schema": {
+      "const": "mirror.roll-up-cli-payload-fixture.v0.1"
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1
+    },
+    "required_fields": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "anchor_errors",
+          "artifact_index_diagnostics",
+          "artifact_index_errors",
+          "diagnostic_summary",
+          "entry_count",
+          "merkle_root",
+          "missing_indexes",
+          "outgoing_ticket_count",
+          "outgoing_tickets",
+          "previous_anchor_hash",
+          "rollup_path",
+          "rollup_sha256",
+          "status"
+        ]
+      },
+      "minItems": 13,
+      "maxItems": 13,
+      "uniqueItems": true
+    },
+    "field_types": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "anchor_errors",
+        "artifact_index_diagnostics",
+        "artifact_index_errors",
+        "diagnostic_summary",
+        "entry_count",
+        "merkle_root",
+        "missing_indexes",
+        "outgoing_ticket_count",
+        "outgoing_tickets",
+        "previous_anchor_hash",
+        "rollup_path",
+        "rollup_sha256",
+        "status"
+      ],
+      "properties": {
+        "anchor_errors": { "const": "array" },
+        "artifact_index_diagnostics": { "const": "array" },
+        "artifact_index_errors": { "const": "array" },
+        "diagnostic_summary": { "const": "object" },
+        "entry_count": { "const": "integer" },
+        "merkle_root": { "const": "string_or_null" },
+        "missing_indexes": { "const": "array" },
+        "outgoing_ticket_count": { "const": "integer" },
+        "outgoing_tickets": { "const": "array" },
+        "previous_anchor_hash": { "const": "string_or_null" },
+        "rollup_path": { "const": "string" },
+        "rollup_sha256": { "const": "sha256_hex" },
+        "status": { "const": "ok_or_fail_string" }
+      }
+    },
+    "diagnostic_summary_example": { "$ref": "#/definitions/diagnostic_summary_example" },
+    "safe_interpretation": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\bdo not certify\\b",
+      "not": {
+        "pattern": "\\b(certifies|guarantees?|official audit)\\b"
+      }
+    }
+  },
+  "definitions": {
+    "payload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "anchor_errors",
+        "artifact_index_diagnostics",
+        "artifact_index_errors",
+        "diagnostic_summary",
+        "entry_count",
+        "merkle_root",
+        "missing_indexes",
+        "outgoing_ticket_count",
+        "outgoing_tickets",
+        "previous_anchor_hash",
+        "rollup_path",
+        "rollup_sha256",
+        "status"
+      ],
+      "properties": {
+        "anchor_errors": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "artifact_index_diagnostics": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/artifact_index_diagnostic" }
+        },
+        "artifact_index_errors": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "diagnostic_summary": { "$ref": "#/definitions/diagnostic_summary" },
+        "entry_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "merkle_root": {
+          "anyOf": [
+            { "type": "null" },
+            { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+          ]
+        },
+        "missing_indexes": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "outgoing_ticket_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "outgoing_tickets": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "previous_anchor_hash": {
+          "anyOf": [
+            { "type": "null" },
+            { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+          ]
+        },
+        "rollup_path": {
+          "type": "string",
+          "pattern": "^daily-roll-up/[0-9]{4}-[0-9]{2}-[0-9]{2}\\.json$"
+        },
+        "rollup_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["ok", "fail"]
+        }
+      }
+    },
+    "diagnostic_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["total", "by_category", "by_lane"],
+      "properties": {
+        "total": { "type": "integer", "minimum": 0 },
+        "by_category": {
+          "type": "object",
+          "additionalProperties": { "type": "integer", "minimum": 1 }
+        },
+        "by_lane": {
+          "type": "object",
+          "additionalProperties": { "type": "integer", "minimum": 1 }
+        }
+      }
+    },
+    "diagnostic_summary_example": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["summary", "consumer_use", "safe_interpretation"],
+      "properties": {
+        "summary": { "$ref": "#/definitions/diagnostic_summary" },
+        "consumer_use": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "routing and sampling"
+        },
+        "safe_interpretation": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\bdoes not certify\\b",
+          "not": {
+            "pattern": "\\b(certifies|guarantees?|official audit)\\b"
+          }
+        }
+      }
+    },
+    "artifact_index_diagnostic": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["category", "lane", "path", "message"],
+      "properties": {
+        "category": {
+          "type": "string",
+          "enum": [
+            "conflicting_hash_rows",
+            "hash_mismatch",
+            "missing_artifact_index",
+            "missing_file",
+            "stale_historical_hash_rows",
+            "unsafe_path"
+          ]
+        },
+        "lane": { "type": "string", "minLength": 1 },
+        "path": { "type": "string", "minLength": 1 },
+        "message": { "type": "string", "minLength": 1 },
+        "actual_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+        "expected_sha256": {
+          "anyOf": [
+            { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+            {
+              "type": "array",
+              "items": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+              "minItems": 1
+            }
+          ]
+        },
+        "stale_sha256": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+          "minItems": 1
+        }
+      }
+    }
+  }
+}

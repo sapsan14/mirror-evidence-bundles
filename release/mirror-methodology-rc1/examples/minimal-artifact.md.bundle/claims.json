@@ -1,0 +1,21 @@
+{
+  "claims": [
+    {
+      "evidence": [
+        {
+          "pointer": "S1",
+          "source_id": "S1"
+        }
+      ],
+      "id": "C1",
+      "notes": "Generated from CLI arguments; review before publication.",
+      "review_status": "draft",
+      "risk": "medium",
+      "safe_wording": "The minimal source states that local replay should not be confused with certification claims.",
+      "text": "The minimal source states that local replay should not be confused with certification claims."
+    }
+  ],
+  "schema": "urn:tyche:mirror:claims:0.1",
+  "schema_id": "urn:tyche:mirror:claims:0.1",
+  "schema_version": "0.1.0"
+}

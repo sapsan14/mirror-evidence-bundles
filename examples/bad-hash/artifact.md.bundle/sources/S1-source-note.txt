@@ -1,0 +1,1 @@
+tampered source bytes for expected bad-hash fixture

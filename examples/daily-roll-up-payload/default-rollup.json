@@ -1,0 +1,1524 @@
+{
+  "artifact_index_diagnostics": [
+    {
+      "actual_sha256": "6b94296575e6a02f8e9c13c13ef4506b9e6830081e047bef8bfad228b7187ced",
+      "category": "hash_mismatch",
+      "expected_sha256": "e037dc01fe3e263e941586567e6caa19d7ad130caf601109dc7c5892662fd076",
+      "lane": "model-card-x-ray",
+      "message": "model-card-x-ray: data/processed/wave2_fetch_report.json hash mismatch: expected e037dc01fe3e263e941586567e6caa19d7ad130caf601109dc7c5892662fd076, got 6b94296575e6a02f8e9c13c13ef4506b9e6830081e047bef8bfad228b7187ced",
+      "path": "data/processed/wave2_fetch_report.json"
+    },
+    {
+      "actual_sha256": "5790460fe73bc968e5b70ebe553eb7a423b6793aae74432ec7646afde3c8b68a",
+      "category": "hash_mismatch",
+      "expected_sha256": "95766431573ecb554ce93c463dbb39c9308531bdd33befe2291d5a72e41b8e1b",
+      "lane": "model-card-x-ray",
+      "message": "model-card-x-ray: data/processed/wave2_subset_summary.json hash mismatch: expected 95766431573ecb554ce93c463dbb39c9308531bdd33befe2291d5a72e41b8e1b, got 5790460fe73bc968e5b70ebe553eb7a423b6793aae74432ec7646afde3c8b68a",
+      "path": "data/processed/wave2_subset_summary.json"
+    },
+    {
+      "actual_sha256": "6bdf973942c24ba2abb30609f50a6eb6329e9a7a8a9c608528141dec3906a68e",
+      "category": "hash_mismatch",
+      "expected_sha256": "3c09bd00ba4da0d67a9174beacec9b2f74f96185ccdce5f78b2bb865b1dd0fec",
+      "lane": "model-card-x-ray",
+      "message": "model-card-x-ray: data/processed/wave2_verifications.jsonl hash mismatch: expected 3c09bd00ba4da0d67a9174beacec9b2f74f96185ccdce5f78b2bb865b1dd0fec, got 6bdf973942c24ba2abb30609f50a6eb6329e9a7a8a9c608528141dec3906a68e",
+      "path": "data/processed/wave2_verifications.jsonl"
+    },
+    {
+      "actual_sha256": "784be3d263e518866b48793f7b86a8b1f6d018659659f9bc4ca2b65726608d93",
+      "category": "hash_mismatch",
+      "expected_sha256": "e7fbdb73b78fb462b2ec711a3f6519bee1123f107b451cb8813ec5a4baad8a20",
+      "lane": "model-card-x-ray",
+      "message": "model-card-x-ray: pipeline/verify_claims.py hash mismatch: expected e7fbdb73b78fb462b2ec711a3f6519bee1123f107b451cb8813ec5a4baad8a20, got 784be3d263e518866b48793f7b86a8b1f6d018659659f9bc4ca2b65726608d93",
+      "path": "pipeline/verify_claims.py"
+    },
+    {
+      "actual_sha256": "c4745fbe17b83ec0c520b8cffbad08cda585d23cc7d56509a28a220ae5c3bb39",
+      "category": "hash_mismatch",
+      "expected_sha256": "d79549591ac2f4cef5fe159eb547c88aedda0007cded3d3d984fbafbce13aa8c",
+      "lane": "model-card-x-ray",
+      "message": "model-card-x-ray: tests/test_extract_claims.py hash mismatch: expected d79549591ac2f4cef5fe159eb547c88aedda0007cded3d3d984fbafbce13aa8c, got c4745fbe17b83ec0c520b8cffbad08cda585d23cc7d56509a28a220ae5c3bb39",
+      "path": "tests/test_extract_claims.py"
+    },
+    {
+      "actual_sha256": "2c16501e252357b741ea355a536493d1a190c86a22e9aca5b659bf765f71cb87",
+      "category": "hash_mismatch",
+      "expected_sha256": "f9189fa1a881232671e9885db2e290951915832c74b234168563aaef10f4a897",
+      "lane": "model-card-x-ray",
+      "message": "model-card-x-ray: tests/test_verify_claims.py hash mismatch: expected f9189fa1a881232671e9885db2e290951915832c74b234168563aaef10f4a897, got 2c16501e252357b741ea355a536493d1a190c86a22e9aca5b659bf765f71cb87",
+      "path": "tests/test_verify_claims.py"
+    },
+    {
+      "actual_sha256": "537720dc6e9463d9311a03dec742c598045504f4354f30a4ffa2cb23752974c7",
+      "category": "stale_historical_hash_rows",
+      "lane": "pki-atlas-trusted-lists",
+      "message": "pki-atlas-trusted-lists: CLAIMS.md has 3 stale historical hash rows; current file matches 537720dc6e9463d9311a03dec742c598045504f4354f30a4ffa2cb23752974c7; stale expected: 1f1c3fa18584148027c0a362dd081fd263b4de7b2a1cce1ed0e0c7db16a8e7a9, 23006b29d47d2f92a8c447b30f2e56419fa69b7ea63daa87293858f5cdb7ceef, 5a61f0947edebece33e6d9444e901ac93880f00b61b1100a40ad168364c2e590",
+      "path": "CLAIMS.md",
+      "stale_sha256": [
+        "1f1c3fa18584148027c0a362dd081fd263b4de7b2a1cce1ed0e0c7db16a8e7a9",
+        "23006b29d47d2f92a8c447b30f2e56419fa69b7ea63daa87293858f5cdb7ceef",
+        "5a61f0947edebece33e6d9444e901ac93880f00b61b1100a40ad168364c2e590"
+      ]
+    },
+    {
+      "actual_sha256": "ad5bc67bab4b10c48bc712fbc88e5938f1fe524ff20136bbad3ed14083bfbe47",
+      "category": "stale_historical_hash_rows",
+      "lane": "pki-atlas-trusted-lists",
+      "message": "pki-atlas-trusted-lists: SOURCES.md has 3 stale historical hash rows; current file matches ad5bc67bab4b10c48bc712fbc88e5938f1fe524ff20136bbad3ed14083bfbe47; stale expected: 4bd5b4118d9121612136a2356ab7c5400ddae9eadf19bac93e0055bfe945b048, d392b7deeaf235f72b7100e2b5ec71270f2a9179d79d0205d7816b958401dafb, e3fe3d3e243e06e66050ca21b5e7b18c0bb14a6d184efcd9cf1509adc05f65d6",
+      "path": "SOURCES.md",
+      "stale_sha256": [
+        "4bd5b4118d9121612136a2356ab7c5400ddae9eadf19bac93e0055bfe945b048",
+        "d392b7deeaf235f72b7100e2b5ec71270f2a9179d79d0205d7816b958401dafb",
+        "e3fe3d3e243e06e66050ca21b5e7b18c0bb14a6d184efcd9cf1509adc05f65d6"
+      ]
+    },
+    {
+      "actual_sha256": "5a6188924d25102a5f8e1a22a8ceb5d627045f3bca8f6d32823dba5c4c65bc4b",
+      "category": "stale_historical_hash_rows",
+      "lane": "pki-atlas-trusted-lists",
+      "message": "pki-atlas-trusted-lists: chapter/50-tooling.md has 2 stale historical hash rows; current file matches 5a6188924d25102a5f8e1a22a8ceb5d627045f3bca8f6d32823dba5c4c65bc4b; stale expected: a0afd5b8ad6ea067a0601b9977205ccccc1b55c9e91e62051a22cf06b5335277, a28e67132e2acb4e45a2e0e5ac79f10e5c0858e06d51bdb37c75947e071a8405",
+      "path": "chapter/50-tooling.md",
+      "stale_sha256": [
+        "a0afd5b8ad6ea067a0601b9977205ccccc1b55c9e91e62051a22cf06b5335277",
+        "a28e67132e2acb4e45a2e0e5ac79f10e5c0858e06d51bdb37c75947e071a8405"
+      ]
+    },
+    {
+      "actual_sha256": "51005daa98fca376e7f04803379cc1038862c9ecb444c4db40af4a553edc1db9",
+      "category": "stale_historical_hash_rows",
+      "lane": "pki-atlas-trusted-lists",
+      "message": "pki-atlas-trusted-lists: chapter/90-references.md has 2 stale historical hash rows; current file matches 51005daa98fca376e7f04803379cc1038862c9ecb444c4db40af4a553edc1db9; stale expected: 11d5e3c2dcf1eae7de62ff0a6a39b3b54b501517baf0941eb7070c48cb2e611e, 96e29c57ca764ec4332f1d5d907539dbf0dc09cce1665f9f2e6edde901d8f752",
+      "path": "chapter/90-references.md",
+      "stale_sha256": [
+        "11d5e3c2dcf1eae7de62ff0a6a39b3b54b501517baf0941eb7070c48cb2e611e",
+        "96e29c57ca764ec4332f1d5d907539dbf0dc09cce1665f9f2e6edde901d8f752"
+      ]
+    },
+    {
+      "actual_sha256": "38d26679a6a8adf4b135700c0baff043f9a4169656d079820582ad1261c2cb91",
+      "category": "stale_historical_hash_rows",
+      "lane": "pki-atlas-trusted-lists",
+      "message": "pki-atlas-trusted-lists: snapshots/2026-05-19/reference-consistency-review-current.json has 1 stale historical hash row; current file matches 38d26679a6a8adf4b135700c0baff043f9a4169656d079820582ad1261c2cb91; stale expected: 8080ffc4897affa1e1a1850914d12ca93144570ce9d2ba738a185720d50d0912",
+      "path": "snapshots/2026-05-19/reference-consistency-review-current.json",
+      "stale_sha256": [
+        "8080ffc4897affa1e1a1850914d12ca93144570ce9d2ba738a185720d50d0912"
+      ]
+    },
+    {
+      "actual_sha256": "74c896c4247e84bac6f7ae3de42ace9fd9fe083a61174383de1bc27dabb9b640",
+      "category": "stale_historical_hash_rows",
+      "lane": "pki-atlas-trusted-lists",
+      "message": "pki-atlas-trusted-lists: snapshots/2026-05-19/snapshot-date-lineage-review.json has 1 stale historical hash row; current file matches 74c896c4247e84bac6f7ae3de42ace9fd9fe083a61174383de1bc27dabb9b640; stale expected: 6731ded7543e1d718c9a3ddd36c0a32408d513c7267879f9406ea02b59c8b200",
+      "path": "snapshots/2026-05-19/snapshot-date-lineage-review.json",
+      "stale_sha256": [
+        "6731ded7543e1d718c9a3ddd36c0a32408d513c7267879f9406ea02b59c8b200"
+      ]
+    },
+    {
+      "actual_sha256": "8a6f88be38c292182daf2e38d8e4632fbb9687f229d6f4e7d46ef11c0cda0787",
+      "category": "stale_historical_hash_rows",
+      "lane": "pki-atlas-trusted-lists",
+      "message": "pki-atlas-trusted-lists: snapshots/2026-05-19/tooling-command-example-check.json has 2 stale historical hash rows; current file matches 8a6f88be38c292182daf2e38d8e4632fbb9687f229d6f4e7d46ef11c0cda0787; stale expected: 523e626f9fa3ab466ede678c3e941968a4a58ac5f553a9bcb5632b4f36c447e2, 64f4d5122b6814ddbf1ac55ce2b437445809f35cd21df62df868c1b576245e72",
+      "path": "snapshots/2026-05-19/tooling-command-example-check.json",
+      "stale_sha256": [
+        "523e626f9fa3ab466ede678c3e941968a4a58ac5f553a9bcb5632b4f36c447e2",
+        "64f4d5122b6814ddbf1ac55ce2b437445809f35cd21df62df868c1b576245e72"
+      ]
+    }
+  ],
+  "artifact_index_errors": [
+    "model-card-x-ray: data/processed/wave2_fetch_report.json hash mismatch: expected e037dc01fe3e263e941586567e6caa19d7ad130caf601109dc7c5892662fd076, got 6b94296575e6a02f8e9c13c13ef4506b9e6830081e047bef8bfad228b7187ced",
+    "model-card-x-ray: data/processed/wave2_subset_summary.json hash mismatch: expected 95766431573ecb554ce93c463dbb39c9308531bdd33befe2291d5a72e41b8e1b, got 5790460fe73bc968e5b70ebe553eb7a423b6793aae74432ec7646afde3c8b68a",
+    "model-card-x-ray: data/processed/wave2_verifications.jsonl hash mismatch: expected 3c09bd00ba4da0d67a9174beacec9b2f74f96185ccdce5f78b2bb865b1dd0fec, got 6bdf973942c24ba2abb30609f50a6eb6329e9a7a8a9c608528141dec3906a68e",
+    "model-card-x-ray: pipeline/verify_claims.py hash mismatch: expected e7fbdb73b78fb462b2ec711a3f6519bee1123f107b451cb8813ec5a4baad8a20, got 784be3d263e518866b48793f7b86a8b1f6d018659659f9bc4ca2b65726608d93",
+    "model-card-x-ray: tests/test_extract_claims.py hash mismatch: expected d79549591ac2f4cef5fe159eb547c88aedda0007cded3d3d984fbafbce13aa8c, got c4745fbe17b83ec0c520b8cffbad08cda585d23cc7d56509a28a220ae5c3bb39",
+    "model-card-x-ray: tests/test_verify_claims.py hash mismatch: expected f9189fa1a881232671e9885db2e290951915832c74b234168563aaef10f4a897, got 2c16501e252357b741ea355a536493d1a190c86a22e9aca5b659bf765f71cb87",
+    "pki-atlas-trusted-lists: CLAIMS.md has 3 stale historical hash rows; current file matches 537720dc6e9463d9311a03dec742c598045504f4354f30a4ffa2cb23752974c7; stale expected: 1f1c3fa18584148027c0a362dd081fd263b4de7b2a1cce1ed0e0c7db16a8e7a9, 23006b29d47d2f92a8c447b30f2e56419fa69b7ea63daa87293858f5cdb7ceef, 5a61f0947edebece33e6d9444e901ac93880f00b61b1100a40ad168364c2e590",
+    "pki-atlas-trusted-lists: SOURCES.md has 3 stale historical hash rows; current file matches ad5bc67bab4b10c48bc712fbc88e5938f1fe524ff20136bbad3ed14083bfbe47; stale expected: 4bd5b4118d9121612136a2356ab7c5400ddae9eadf19bac93e0055bfe945b048, d392b7deeaf235f72b7100e2b5ec71270f2a9179d79d0205d7816b958401dafb, e3fe3d3e243e06e66050ca21b5e7b18c0bb14a6d184efcd9cf1509adc05f65d6",
+    "pki-atlas-trusted-lists: chapter/50-tooling.md has 2 stale historical hash rows; current file matches 5a6188924d25102a5f8e1a22a8ceb5d627045f3bca8f6d32823dba5c4c65bc4b; stale expected: a0afd5b8ad6ea067a0601b9977205ccccc1b55c9e91e62051a22cf06b5335277, a28e67132e2acb4e45a2e0e5ac79f10e5c0858e06d51bdb37c75947e071a8405",
+    "pki-atlas-trusted-lists: chapter/90-references.md has 2 stale historical hash rows; current file matches 51005daa98fca376e7f04803379cc1038862c9ecb444c4db40af4a553edc1db9; stale expected: 11d5e3c2dcf1eae7de62ff0a6a39b3b54b501517baf0941eb7070c48cb2e611e, 96e29c57ca764ec4332f1d5d907539dbf0dc09cce1665f9f2e6edde901d8f752",
+    "pki-atlas-trusted-lists: snapshots/2026-05-19/reference-consistency-review-current.json has 1 stale historical hash row; current file matches 38d26679a6a8adf4b135700c0baff043f9a4169656d079820582ad1261c2cb91; stale expected: 8080ffc4897affa1e1a1850914d12ca93144570ce9d2ba738a185720d50d0912",
+    "pki-atlas-trusted-lists: snapshots/2026-05-19/snapshot-date-lineage-review.json has 1 stale historical hash row; current file matches 74c896c4247e84bac6f7ae3de42ace9fd9fe083a61174383de1bc27dabb9b640; stale expected: 6731ded7543e1d718c9a3ddd36c0a32408d513c7267879f9406ea02b59c8b200",
+    "pki-atlas-trusted-lists: snapshots/2026-05-19/tooling-command-example-check.json has 2 stale historical hash rows; current file matches 8a6f88be38c292182daf2e38d8e4632fbb9687f229d6f4e7d46ef11c0cda0787; stale expected: 523e626f9fa3ab466ede678c3e941968a4a58ac5f553a9bcb5632b4f36c447e2, 64f4d5122b6814ddbf1ac55ce2b437445809f35cd21df62df868c1b576245e72"
+  ],
+  "created": "2026-05-19T09:10:47+03:00",
+  "date": "2026-05-19",
+  "entries": [
+    {
+      "lane": "echo",
+      "path": "CLAIMS.md",
+      "purpose": "Workspace claim ledger.",
+      "sha256": "5df017d4c8d5adcf9330b5ed9e487e45ba44bf3a9c49f5b1e5f00237bf8b165b",
+      "verified": "yes"
+    },
+    {
+      "lane": "echo",
+      "path": "HERMES_PROGRESS.md",
+      "purpose": "Append-only dated work diary.",
+      "sha256": "b1826aa03a8c7f046b76a0f0dcc8aeb858414d5df0a050a6aedef21c3e3ff11d",
+      "verified": "yes"
+    },
+    {
+      "lane": "echo",
+      "path": "PLAN.md",
+      "purpose": "Updated lane plan / next-action state.",
+      "sha256": "1e74eed016490a1544c2a73df653fb40e00d44d2ef128f3a0564ba7700ef9a7b",
+      "verified": "yes"
+    },
+    {
+      "lane": "echo",
+      "path": "SOURCES.md",
+      "purpose": "Workspace source ledger.",
+      "sha256": "0ff8975a9d21e1dae25a2677e90efff7b988b37671ae1bfe871cb7bfa0f4108c",
+      "verified": "yes"
+    },
+    {
+      "lane": "echo",
+      "path": "backlog.md",
+      "purpose": "Backlog status update for topic 0016.",
+      "sha256": "a398987f92be60074a247e25dc07a38554b11e77ca5a88475b189948eaaa0a20",
+      "verified": "yes"
+    },
+    {
+      "lane": "echo",
+      "path": "drafts/0122-small-source-citation-hygiene-micro-preprints/draft.html",
+      "purpose": "Clean print-CSS HTML fallback render.",
+      "sha256": "0961691f6abcdf0253501a5b278ff06e0d9cc635c9e6d99a22922aaf2ead7611",
+      "verified": "yes"
+    },
+    {
+      "lane": "echo",
+      "path": "drafts/0122-small-source-citation-hygiene-micro-preprints/draft.md",
+      "purpose": "Micro-preprint markdown source.",
+      "sha256": "bbc4a1ae771d908fa99665b7d702c6850bf2d981c760e3f3dca0daaa543165bd",
+      "verified": "yes"
+    },
+    {
+      "lane": "echo",
+      "path": "drafts/0122-small-source-citation-hygiene-micro-preprints/draft.pdf",
+      "purpose": "Fallback rendered artifact stored with requested output name.",
+      "sha256": "0961691f6abcdf0253501a5b278ff06e0d9cc635c9e6d99a22922aaf2ead7611",
+      "verified": "yes"
+    },
+    {
+      "lane": "echo",
+      "path": "drafts/0122-small-source-citation-hygiene-micro-preprints/draft.pdf.bundle/claims.json",
+      "purpose": "MIRROR claim records.",
+      "sha256": "0ebaa18d50814784a1eeb3fce348571c73c86cd742b48fe1543d7c5252b4d2cd",
+      "verified": "yes"
+    },
+    {
+      "lane": "echo",
+      "path": "drafts/0122-small-source-citation-hygiene-micro-preprints/draft.pdf.bundle/draft.md",
+      "purpose": "Bundled markdown source copy.",
+      "sha256": "bbc4a1ae771d908fa99665b7d702c6850bf2d981c760e3f3dca0daaa543165bd",
+      "verified": "yes"
+    },
+    {
+      "lane": "echo",
+      "path": "drafts/0122-small-source-citation-hygiene-micro-preprints/draft.pdf.bundle/draft.pdf",
+      "purpose": "Bundled fallback rendered artifact.",
+      "sha256": "0961691f6abcdf0253501a5b278ff06e0d9cc635c9e6d99a22922aaf2ead7611",
+      "verified": "yes"
+    },
+    {
+      "lane": "echo",
+      "path": "drafts/0122-small-source-citation-hygiene-micro-preprints/draft.pdf.bundle/manifest.json",
+      "purpose": "MIRROR bundle manifest.",
+      "sha256": "c9c9a47450291e6567633dd2a54735025f112f7f44b1f6e377adf32f0ee3cbb5",
+      "verified": "yes"
+    },
+    {
+      "lane": "echo",
+      "path": "drafts/0122-small-source-citation-hygiene-micro-preprints/draft.pdf.bundle/notes.md",
+      "purpose": "MIRROR methodology and caveats notes.",
+      "sha256": "0269657d9e4a0a7d88215c46cdee4fa0635b00b76aef043cce9aa03686e4aea4",
+      "verified": "yes"
+    },
+    {
+      "lane": "echo",
+      "path": "drafts/0122-small-source-citation-hygiene-micro-preprints/draft.pdf.bundle/sources/S-0122-0001.json",
+      "purpose": "Bundled source copy or source URL/meta record.",
+      "sha256": "fe678129c2e27f9b725e8f6040a35812c36cfa4b8044de64a541033e8dfb7620",
+      "verified": "yes"
+    },
+    {
+      "lane": "echo",
+      "path": "drafts/0122-small-source-citation-hygiene-micro-preprints/draft.pdf.bundle/sources/S-0122-0002.json",
+      "purpose": "Bundled source copy or source URL/meta record.",
+      "sha256": "43d607dbe07eff7ff6c3b454591bf40ce1faec74bec36f0b6bd7f88f6d900c4f",
+      "verified": "yes"
+    },
+    {
+      "lane": "echo",
+      "path": "drafts/0122-small-source-citation-hygiene-micro-preprints/draft.pdf.bundle/sources/S-0122-0003.json",
+      "purpose": "Bundled source copy or source URL/meta record.",
+      "sha256": "fdcf2fac7d7b6e0a003fe0ecf16c96f88def121bafb681feabce480a5a84a8e5",
+      "verified": "yes"
+    },
+    {
+      "lane": "echo",
+      "path": "drafts/0122-small-source-citation-hygiene-micro-preprints/draft.pdf.bundle/sources/S-0122-0004.json",
+      "purpose": "Bundled source copy or source URL/meta record.",
+      "sha256": "09c4a5815ae9a49cfdec06cddc8bb65468691a13ec1e53b07d3ef6825772d0b6",
+      "verified": "yes"
+    },
+    {
+      "lane": "echo",
+      "path": "drafts/0122-small-source-citation-hygiene-micro-preprints/draft.pdf.bundle/sources/S-0122-0005.json",
+      "purpose": "Bundled source copy or source URL/meta record.",
+      "sha256": "b61a52d46de511e5c632653d375c162a6d657c61c3125a19ab61bbd5f4a694b0",
+      "verified": "yes"
+    },
+    {
+      "lane": "echo",
+      "path": "drafts/0122-small-source-citation-hygiene-micro-preprints/draft.pdf.bundle/sources/acm-artifact-review-and-badging.html",
+      "purpose": "Bundled source copy or source URL/meta record.",
+      "sha256": "eb6d5583b46c26ec7f75fe9bf3a27a2f8c693dcd7971f996571a53db291a0763",
+      "verified": "yes"
+    },
+    {
+      "lane": "echo",
+      "path": "drafts/0122-small-source-citation-hygiene-micro-preprints/draft.pdf.bundle/sources/acm-artifact-review-and-badging.html.meta.json",
+      "purpose": "Bundled source copy or source URL/meta record.",
+      "sha256": "b61a52d46de511e5c632653d375c162a6d657c61c3125a19ab61bbd5f4a694b0",
+      "verified": "yes"
+    },
+    {
+      "lane": "echo",
+      "path": "drafts/0122-small-source-citation-hygiene-micro-preprints/draft.pdf.bundle/sources/force11-data-citation-principles.html",
+      "purpose": "Bundled source copy or source URL/meta record.",
+      "sha256": "9af31f47203fb262373a78e6d20f7eb5446e7441870509d29e545b4bfa121dd2",
+      "verified": "yes"
+    },
+    {
+      "lane": "echo",
+      "path": "drafts/0122-small-source-citation-hygiene-micro-preprints/draft.pdf.bundle/sources/force11-data-citation-principles.html.meta.json",
+      "purpose": "Bundled source copy or source URL/meta record.",
+      "sha256": "43d607dbe07eff7ff6c3b454591bf40ce1faec74bec36f0b6bd7f88f6d900c4f",
+      "verified": "yes"
+    },
+    {
+      "lane": "echo",
+      "path": "drafts/0122-small-source-citation-hygiene-micro-preprints/draft.pdf.bundle/sources/mirror-schema-v0.1.0.md",
+      "purpose": "Bundled source copy or source URL/meta record.",
+      "sha256": "160577c0ab8282e6ec5d7c91ee4e24167ddced55ce770eb5788f0a0f496df011",
+      "verified": "yes"
+    },
+    {
+      "lane": "echo",
+      "path": "drafts/0122-small-source-citation-hygiene-micro-preprints/draft.pdf.bundle/sources/rfc3986.txt",
+      "purpose": "Bundled source copy or source URL/meta record.",
+      "sha256": "3102dae4b68cebe40337730312fcb612297b8928547267e8b3d1ee6002b2d683",
+      "verified": "yes"
+    },
+    {
+      "lane": "echo",
+      "path": "drafts/0122-small-source-citation-hygiene-micro-preprints/draft.pdf.bundle/sources/rfc3986.txt.meta.json",
+      "purpose": "Bundled source copy or source URL/meta record.",
+      "sha256": "fdcf2fac7d7b6e0a003fe0ecf16c96f88def121bafb681feabce480a5a84a8e5",
+      "verified": "yes"
+    },
+    {
+      "lane": "echo",
+      "path": "drafts/0122-small-source-citation-hygiene-micro-preprints/draft.pdf.bundle/sources/w3c-dwbp.html",
+      "purpose": "Bundled source copy or source URL/meta record.",
+      "sha256": "12e8fdd8b20569b3aea3ff504429c86e9f26f09f7a9a0e29fe7e1dd4bfef785d",
+      "verified": "yes"
+    },
+    {
+      "lane": "echo",
+      "path": "drafts/0122-small-source-citation-hygiene-micro-preprints/draft.pdf.bundle/sources/w3c-dwbp.html.meta.json",
+      "purpose": "Bundled source copy or source URL/meta record.",
+      "sha256": "09c4a5815ae9a49cfdec06cddc8bb65468691a13ec1e53b07d3ef6825772d0b6",
+      "verified": "yes"
+    },
+    {
+      "lane": "echo",
+      "path": "drafts/0122-small-source-citation-hygiene-micro-preprints/zenodo-metadata.json",
+      "purpose": "Draft Zenodo metadata for operator review.",
+      "sha256": "297edb0d2d9db87d9a4164faa5d39cd35a6614a19f6386ad7216513de962ebc4",
+      "verified": "yes"
+    },
+    {
+      "lane": "echo",
+      "path": "index.md",
+      "purpose": "Rolling index of bundled local drafts.",
+      "sha256": "703c6d7536be766ec8fb11c23960620966a234e0340375f272aacbbad288f5ba",
+      "verified": "yes"
+    },
+    {
+      "lane": "echo",
+      "path": "tools/build_0122.py",
+      "purpose": "One-off local builder used to assemble draft 0122 artifacts.",
+      "sha256": "8bd4051f9694af373b1d02cb23fcf1d072b395f5212b0e5bd6b51ac5f0afea26",
+      "verified": "yes"
+    },
+    {
+      "lane": "model-card-x-ray",
+      "path": "ARTIFACT_INDEX.md",
+      "purpose": "Artifact ledger with sha256 values for generated workspace artifacts.",
+      "sha256": "f97b2f9b0cfa3d301c91347986db0a875fe5f1bd7ae9ca924f958ce978920ee5",
+      "verified": "yes"
+    },
+    {
+      "lane": "model-card-x-ray",
+      "path": "CLAIMS.md",
+      "purpose": "Substantive claim ledger with risk notes and safe wording.",
+      "sha256": "f783aad0ace8841677060c3f626aa776b26a7f7dde2b31722aca80c937ef69d3",
+      "verified": "yes"
+    },
+    {
+      "lane": "model-card-x-ray",
+      "path": "HERMES_PROGRESS.md",
+      "purpose": "Append-only dated worker diary and next-action log.",
+      "sha256": "d485fa6f9869f8af9b201369a8500ba6feabd1940ed0aa909ed099ac3456fdfd",
+      "verified": "yes"
+    },
+    {
+      "lane": "model-card-x-ray",
+      "path": "PLAN.md",
+      "purpose": "Frozen mission, scope, compliance rails, and first steps.",
+      "sha256": "280c3f1b741ccfd9dd14537138183522796273ca9fff4079706e8f6daf6b8976",
+      "verified": "yes"
+    },
+    {
+      "lane": "model-card-x-ray",
+      "path": "SOURCES.md",
+      "purpose": "Source ledger for external and local evidence pointers.",
+      "sha256": "ccab3d9c3810ff770642041b0f0b046527d93c7e965410de30d6b5bbfccf352d",
+      "verified": "yes"
+    },
+    {
+      "lane": "model-card-x-ray",
+      "path": "analysis/figures/wave2_category_by_gap_kind.svg",
+      "purpose": "Aggregate Wave 2 category-by-bucket figure after OpenASR leaderboard WER prose parser regression.",
+      "sha256": "cd70305ad60abd8df1119b95438089582b8dc0bc17ccfb8c3d6f9fdc1c27153f",
+      "verified": "yes"
+    },
+    {
+      "lane": "model-card-x-ray",
+      "path": "analysis/figures/wave2_gap_kind_counts.svg",
+      "purpose": "Aggregate Wave 2 coverage/evidence bucket count figure after OpenASR leaderboard WER prose parser regression.",
+      "sha256": "a10d3f5cab8414cdc8aca03c1549caac0fb87038d695b4891eb56c2123fe7d91",
+      "verified": "yes"
+    },
+    {
+      "lane": "model-card-x-ray",
+      "path": "analysis/figures/wave2_reproducibility_buckets.svg",
+      "purpose": "Aggregate Wave 2 reproducibility-bucket figure after OpenASR leaderboard WER prose parser regression.",
+      "sha256": "272014ea43e75f7dbc02a1e7669888e15011c51ccfcb93633b66d46beebb113a",
+      "verified": "yes"
+    },
+    {
+      "lane": "model-card-x-ray",
+      "path": "data/processed/claims.jsonl",
+      "purpose": "Extracted atomic claims from currently available raw card snapshots.",
+      "sha256": "94e298b87f40e834128a5a1f306486dce6cc522455630e237376c9f9cc28523e",
+      "verified": "yes"
+    },
+    {
+      "lane": "model-card-x-ray",
+      "path": "data/processed/verifications.benchmark-sample.jsonl",
+      "purpose": "Benchmark verifier sample for `AdamCodd/vit-base-nsfw-detector`.",
+      "sha256": "f2f00415ebc459012b04e6ff0176f2eeae9cd61c3c514999255a57eb4a998963",
+      "verified": "yes"
+    },
+    {
+      "lane": "model-card-x-ray",
+      "path": "data/processed/verifications.bert-license.jsonl",
+      "purpose": "Licensing verifier smoke-test output for bert-base-uncased.",
+      "sha256": "69df6e7d133e27a87922a2011bac4d93800c66da636875fe68130284ec2dba0e",
+      "verified": "yes"
+    },
+    {
+      "lane": "model-card-x-ray",
+      "path": "data/processed/verifications.compat-smoke.jsonl",
+      "purpose": "Three-record verifier CLI compatibility smoke output using runner-facing `--cards-dir`.",
+      "sha256": "0d58f546cdd94f3b694b76006e5211b448452a3c413c6ca80927a44cf8de1a88",
+      "verified": "yes"
+    },
+    {
+      "lane": "model-card-x-ray",
+      "path": "data/processed/verifications.sample-license.jsonl",
+      "purpose": "Licensing verifier sample output for first 25 local licensing claims.",
+      "sha256": "4ddddf63e8be962b4494657729218477c3b277cf02cfcbfd2562ab2ff0994223",
+      "verified": "yes"
+    },
+    {
+      "lane": "model-card-x-ray",
+      "path": "data/processed/verifications.zephyr-benchmarks.jsonl",
+      "purpose": "Diagnostic benchmark verifier sample for `HuggingFaceH4/zephyr-7b-beta`, showing model-index non-match after heuristic tightening.",
+      "sha256": "22b5bc1f32f4146549c2c3b98e42c9a5597b76b695f83c3ed25c4c8a1be1b3be",
+      "verified": "yes"
+    },
+    {
+      "lane": "model-card-x-ray",
+      "path": "data/processed/wave2_card_paths.txt",
+      "purpose": "`4fa1316296ddbca17f40eb00f099a3a7e56ecfaf819d2b8ac5ca09799d388d3e`",
+      "sha256": "4fa1316296ddbca17f40eb00f099a3a7e56ecfaf819d2b8ac5ca09799d388d3e",
+      "verified": "yes"
+    },
+    {
+      "lane": "model-card-x-ray",
+      "path": "data/processed/wave2_claims.jsonl",
+      "purpose": "Extracted candidate claims for the clean N=171 Wave 2 cached refresh after OpenASR leaderboard WER prose parser regression.",
+      "sha256": "6961c23b5be073558743eaffb965af83f2d5a8157f24d118ae29b641460f71a4",
+      "verified": "yes"
+    },
+    {
+      "lane": "model-card-x-ray",
+      "path": "data/processed/wave2_coverage_summary.json",
+      "purpose": "Aggregate coverage summary for clean N=171 Wave 2 refresh after OpenASR leaderboard WER prose parser regression.",
+      "sha256": "bca7223869eea2df6be78237172fd63f7397423cd7032b5458bed432abf18cc0",
+      "verified": "yes"
+    },
+    {
+      "lane": "model-card-x-ray",
+      "path": "data/processed/wave2_fetch_report.json",
+      "purpose": "Fetch/cache report for clean N=171 Wave 2 materialization after OpenASR leaderboard WER prose parser regression; all selected snapshots were cached in this iteration.",
+      "sha256": "e037dc01fe3e263e941586567e6caa19d7ad130caf601109dc7c5892662fd076",
+      "verified": "yes"
+    },
+    {
+      "lane": "model-card-x-ray",
+      "path": "data/processed/wave2_gap_audit.md",
+      "purpose": "Aggregate/manual parsed-evidence gap and scale-gate audit for Wave 2, extended with OpenASR leaderboard WER prose parser regression notes.",
+      "sha256": "dcabdafc2875e477a57008846d0ed27121a960ba40019f5f45390ca7c759aca2",
+      "verified": "yes"
+    },
+    {
+      "lane": "model-card-x-ray",
+      "path": "data/processed/wave2_subset_summary.json",
+      "purpose": "Subset summary for clean N=171 Wave 2 cached refresh after OpenASR leaderboard WER prose parser regression.",
+      "sha256": "95766431573ecb554ce93c463dbb39c9308531bdd33befe2291d5a72e41b8e1b",
+      "verified": "yes"
+    },
+    {
+      "lane": "model-card-x-ray",
+      "path": "data/processed/wave2_summary_tables.md",
+      "purpose": "Aggregate-only Markdown summary tables for clean N=171 Wave 2 refresh after OpenASR leaderboard WER prose parser regression.",
+      "sha256": "67008c5bf5a2dbcc6873480b75675079dc760d8bea5238d8a9beab662c4f9bbf",
+      "verified": "yes"
+    },
+    {
+      "lane": "model-card-x-ray",
+      "path": "data/processed/wave2_verifications.jsonl",
+      "purpose": "Clean N=171 Wave 2 aggregate verification refresh after OpenASR leaderboard WER prose parser regression.",
+      "sha256": "3c09bd00ba4da0d67a9174beacec9b2f74f96185ccdce5f78b2bb865b1dd0fec",
+      "verified": "yes"
+    },
+    {
+      "lane": "model-card-x-ray",
+      "path": "data/raw/cards/bert-base-uncased.json",
+      "purpose": "Fetched public model-card snapshot for scraper smoke test.",
+      "sha256": "a893b955ea19ae4973b6856421f1eb0424b52175edc6ec238792467617945954",
+      "verified": "yes"
+    },
+    {
+      "lane": "model-card-x-ray",
+      "path": "data/raw/sources/bert-base-uncased/LICENSE",
+      "purpose": "Public repository license file fetched for licensing verifier smoke test.",
+      "sha256": "43070e2d4e532684de521b885f385d0841030efa2b1a20bafb76133a5e1379c1",
+      "verified": "yes"
+    },
+    {
+      "lane": "model-card-x-ray",
+      "path": "data/raw/sources/bert-base-uncased/LICENSE.meta.json",
+      "purpose": "Provenance metadata for fetched bert-base-uncased license file.",
+      "sha256": "f6fcc2664e8e6f4dda35d453f8eaf729ab0c4fd63eea4ea5456c7553311d5d52",
+      "verified": "yes"
+    },
+    {
+      "lane": "model-card-x-ray",
+      "path": "data/raw/sources/paperswithcode/GSM8k_5-shot_gsm8k_Text_Generation.meta.json",
+      "purpose": "Provenance metadata for bounded Papers with Code `GSM8k (5-shot)` lookup.",
+      "sha256": "6fe1432174975ad7f9f104ea7467d52e3c4e9a798afa55d0cabbaefb3f318f3f",
+      "verified": "yes"
+    },
+    {
+      "lane": "model-card-x-ray",
+      "path": "data/raw/sources/paperswithcode/Image_Classification.meta.json",
+      "purpose": "Provenance metadata for bounded Papers with Code `Image Classification` lookup.",
+      "sha256": "b582aa0263a7f8a62b074c96696c1cbfbf79b0bf5a12f33f191ec5b4ec9af0ef",
+      "verified": "yes"
+    },
+    {
+      "lane": "model-card-x-ray",
+      "path": "data/raw/sources/paperswithcode/search_GSM8k_5-shot_gsm8k_Text_Generation.body",
+      "purpose": "Captured bounded Papers with Code search response body for diagnostic benchmark lookup.",
+      "sha256": "7fc1673104d9c65bb4d9cc1742475ce67f1245c24a4ed5d32dbe8ce6c3a15690",
+      "verified": "yes"
+    },
+    {
+      "lane": "model-card-x-ray",
+      "path": "data/raw/sources/paperswithcode/search_Image_Classification.body",
+      "purpose": "Captured bounded Papers with Code search response body for benchmark verifier provenance.",
+      "sha256": "1fee40b5fccdcea947700d62006ffe21e3dc3b4531b9c14ae2721214c7667818",
+      "verified": "yes"
+    },
+    {
+      "lane": "model-card-x-ray",
+      "path": "data/taxonomy/discrepancies.md",
+      "purpose": "Discrepancy taxonomy draft, extended with pilot and Wave 2 evidence-bucket/manual-review categories.",
+      "sha256": "047133d76727487d4d8e5eb139300fa268767a0c1decbe8c9c4563c8f7f47f4e",
+      "verified": "yes"
+    },
+    {
+      "lane": "model-card-x-ray",
+      "path": "paper/draft.md",
+      "purpose": "Local working preprint draft with pilot and Wave 2 aggregate sections.",
+      "sha256": "ab6957d96a80d634985e1cba2478c6e8728c64e0ade197b62c472d23cb10839d",
+      "verified": "yes"
+    },
+    {
+      "lane": "model-card-x-ray",
+      "path": "pipeline/extract_claims.py",
+      "purpose": "Claim extractor with repeated selected-card input support, HTML benchmark-table fragment suppression, and unfenced benchmark-code parser-noise suppression.",
+      "sha256": "902b47f8d03bb8d115b4b9c52aa0604194d98207210763cec3b72207da28183c",
+      "verified": "yes"
+    },
+    {
+      "lane": "model-card-x-ray",
+      "path": "pipeline/fetch_wave2.py",
+      "purpose": "Wave 2 materialization runner with tested current extractor/verifier command construction.",
+      "sha256": "519b97799d73e01e34c5ecbdfde3e8400e0ad547279dc6ec6306099576322dd6",
+      "verified": "yes"
+    },
+    {
+      "lane": "model-card-x-ray",
+      "path": "pipeline/scrape.py",
+      "purpose": "Public Hugging Face model-card scraper restored from the workspace pilot bundle after detecting a source/bundle drift regression.",
+      "sha256": "7271418fa9e4ceb4fc9a0cc5305cb74a60c5a337c4a00641e2473890b7931826",
+      "verified": "yes"
+    },
+    {
+      "lane": "model-card-x-ray",
+      "path": "pipeline/verify_claims.py",
+      "purpose": "Verification dispatcher with OpenASR leaderboard WER prose tuple parsing, named benchmark-score prose tuple parsing, benchmark pass@ metric prose tuple parsing, COPYING license-file recognition, nested TensorBoard support-file regression, and broader Wave 2 category verifiers.",
+      "sha256": "e7fbdb73b78fb462b2ec711a3f6519bee1123f107b451cb8813ec5a4baad8a20",
+      "verified": "yes"
+    },
+    {
+      "lane": "model-card-x-ray",
+      "path": "requirements.txt",
+      "purpose": "Pinned Python dependency snapshot for local venv.",
+      "sha256": "9efe1c7ee60ddaf59e59da42a90eabf614c6a67da2168fc8721ed3f3979b4a9a",
+      "verified": "yes"
+    },
+    {
+      "lane": "model-card-x-ray",
+      "path": "tests/test_extract_claims.py",
+      "purpose": "Claim extractor regression tests including repeated input path expansion, HTML table-fragment suppression, and unfenced benchmark-code suppression.",
+      "sha256": "d79549591ac2f4cef5fe159eb547c88aedda0007cded3d3d984fbafbce13aa8c",
+      "verified": "yes"
+    },
+    {
+      "lane": "model-card-x-ray",
+      "path": "tests/test_fetch_wave2.py",
+      "purpose": "Wave 2 runner regression tests for current extractor/verifier CLI command construction.",
+      "sha256": "7b966a9b04d274999855ac14fb09524456d65d969f5c14f24f740ca546e23be0",
+      "verified": "yes"
+    },
+    {
+      "lane": "model-card-x-ray",
+      "path": "tests/test_verify_claims.py",
+      "purpose": "Verifier regression tests, now including OpenASR leaderboard WER prose tuple parsing, named benchmark-score prose tuple parsing, COPYING license-file, nested TensorBoard support-file, and benchmark pass@ metric prose tuple coverage.",
+      "sha256": "f9189fa1a881232671e9885db2e290951915832c74b234168563aaef10f4a897",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "CLAIMS.md",
+      "purpose": "Persistent claim ledger updated after ledger table-shape diagnostic integration",
+      "sha256": "1f1c3fa18584148027c0a362dd081fd263b4de7b2a1cce1ed0e0c7db16a8e7a9",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "CLAIMS.md",
+      "purpose": "Persistent claim ledger normalized for legacy row shape and updated with ledger table-shape review result",
+      "sha256": "23006b29d47d2f92a8c447b30f2e56419fa69b7ea63daa87293858f5cdb7ceef",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "CLAIMS.md",
+      "purpose": "Persistent claim ledger updated after duplicate-reference classifier integration",
+      "sha256": "537720dc6e9463d9311a03dec742c598045504f4354f30a4ffa2cb23752974c7",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "CLAIMS.md",
+      "purpose": "Persistent ledger updated after status-summary synchronization integration",
+      "sha256": "5a61f0947edebece33e6d9444e901ac93880f00b61b1100a40ad168364c2e590",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "PLAN.md",
+      "purpose": "Frozen mission, scope, compliance rails, and first ten steps",
+      "sha256": "441042b175995365d06e59d9419d66d6c3c50a58392120db8e067e31bdac66f3",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "SOURCES.md",
+      "purpose": "Persistent ledger updated after status-summary synchronization integration",
+      "sha256": "4bd5b4118d9121612136a2356ab7c5400ddae9eadf19bac93e0055bfe945b048",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "SOURCES.md",
+      "purpose": "Persistent source ledger updated after duplicate-reference classifier integration",
+      "sha256": "ad5bc67bab4b10c48bc712fbc88e5938f1fe524ff20136bbad3ed14083bfbe47",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "SOURCES.md",
+      "purpose": "Persistent source ledger updated after ledger table-shape diagnostic integration",
+      "sha256": "d392b7deeaf235f72b7100e2b5ec71270f2a9179d79d0205d7816b958401dafb",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "SOURCES.md",
+      "purpose": "Persistent source ledger normalized for legacy row shape and updated with ledger table-shape review result",
+      "sha256": "e3fe3d3e243e06e66050ca21b5e7b18c0bb14a6d184efcd9cf1509adc05f65d6",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "chapter/00-frontmatter.md",
+      "purpose": "Scaffolded chapter section with headings and stubs",
+      "sha256": "4af6b586fcc962cdaf1e69e13ff3a3632d2ec144640dd7ac759786d732c7e000",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "chapter/10-background.md",
+      "purpose": "Scaffolded chapter section with headings and stubs",
+      "sha256": "96a0fc87e30513c272941b90d2826c542b2efdd392fc5c1515c151287b8b2fa2",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "chapter/20-anatomy.md",
+      "purpose": "Expanded chapter section explaining trusted-list XML anatomy and field-preservation diagnostics",
+      "sha256": "7ceafe326e157fdd6b0eaf26d37873d8c9e7ef24efe1a9ebaef2459201909c30",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "chapter/30-lifecycle.md",
+      "purpose": "Expanded lifecycle section with release-lineage freeze versus working-state refresh guidance",
+      "sha256": "2c47cc27a47f9fb2c7440616dc51955fcfadacd5e88df81f1e64069296583813",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "chapter/40-failure-modes.md",
+      "purpose": "Scaffolded chapter section with headings and stubs",
+      "sha256": "314553eeed70f5f419a72da24df30cbf6db9596a2c5086b40d19c773b16e4cd5",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "chapter/50-tooling.md",
+      "purpose": "Tooling appendix updated to document the persistent-ledger duplicate-reference classifier",
+      "sha256": "5a6188924d25102a5f8e1a22a8ceb5d627045f3bca8f6d32823dba5c4c65bc4b",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "chapter/50-tooling.md",
+      "purpose": "Tooling appendix updated to document the persistent-ledger table-shape review diagnostic",
+      "sha256": "a0afd5b8ad6ea067a0601b9977205ccccc1b55c9e91e62051a22cf06b5335277",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "chapter/50-tooling.md",
+      "purpose": "Expanded tooling appendix documenting local tooling, v0.2 preflight/recovery diagnostics, status summary, volatile hash policy, command-order coverage, and status-summary synchronization",
+      "sha256": "a28e67132e2acb4e45a2e0e5ac79f10e5c0858e06d51bdb37c75947e071a8405",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "chapter/60-pqc-readiness.md",
+      "purpose": "Scaffolded chapter section with headings and stubs",
+      "sha256": "11602a371ab03f63c413296a6da8c5aededa881ad532a7fc4c21f691eba741e8",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "chapter/90-references.md",
+      "purpose": "References section with v0.2 working-state provenance and preflight status-summary sync citation",
+      "sha256": "11d5e3c2dcf1eae7de62ff0a6a39b3b54b501517baf0941eb7070c48cb2e611e",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "chapter/90-references.md",
+      "purpose": "References section updated to cite the persistent-ledger duplicate-reference classification report",
+      "sha256": "51005daa98fca376e7f04803379cc1038862c9ecb444c4db40af4a553edc1db9",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "chapter/90-references.md",
+      "purpose": "References section updated to cite the persistent-ledger table-shape review report",
+      "sha256": "96e29c57ca764ec4332f1d5d907539dbf0dc09cce1665f9f2e6edde901d8f752",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "figures/01-lotl-hierarchy.svg",
+      "purpose": "Diagram of LOTL/member-TL/TSP-service hierarchy retained as v0.2 working-state figure after recovery audit review",
+      "sha256": "73a3f06a77f4d555fb86eff1b59ff40be60f7eac64a2465bad97235b38ec1a6a",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "release/v0.2-preflight-checklist.md",
+      "purpose": "Editorial preflight checklist for selecting a v0.2 evidence lineage before any future release/bundle rebuild, updated with status-summary synchronization gate",
+      "sha256": "90868a243aa9665a7356b771e4263ec07705b4e53052fbc44b84b291236f0b45",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "release/v0.2-preflight-status-summary.md",
+      "purpose": "Working-state v0.2 preflight status summary separating stable-hash evidence from volatile hash-deferred reports, refreshed for status-summary sync exclusions",
+      "sha256": "baad4e2557a9357443844638327fdac9dfe5b472a70d922cc1e750dcae2bd0d8",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "snapshots/2026-05-19/bundle-integrity-verification.json",
+      "purpose": "Local diagnostic verifying v0.1 bundle manifest source hashes and current ARTIFACT_INDEX rows",
+      "sha256": "a457fabde8f93ff4bdf28c65ab4e4d2ff2b1241a32e2071b30d311ebf89df680",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "snapshots/2026-05-19/bundle-state-file-refresh-review.json",
+      "purpose": "Decision diagnostic for keeping v0.1 bundle state-file evidence frozen point-in-time",
+      "sha256": "2680c24638095ba7a0579c3b8204dff6fbf502a92bfe22371c443a9ec3845488",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "snapshots/2026-05-19/chapter-v02-working-state-decision.json",
+      "purpose": "Updated decision retaining chapter 50 and chapter 90 as v0.2 working-state chapters with current hashes",
+      "sha256": "25c014d89486b90c7d49bc7d16dcdb535e84de8ea11c6465fae2127f86385536",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "snapshots/2026-05-19/core-tooling-recovery-repair.json",
+      "purpose": "Recovery note for restored PLAN/core trusted-list tooling and regenerated parsed summaries",
+      "sha256": "4f8acc834846e811b6031f001b5f8e6bb4f70c9c5527a43b960ef7648d9260c7",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "snapshots/2026-05-19/ee-tl-parsed.json",
+      "purpose": "Parsed Estonian trusted-list summary regenerated after core-tooling recovery repair",
+      "sha256": "2a542604b6b8b55ce44703e729a5da323cf9eead8362ef0cf14c1a00740b61fe",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "snapshots/2026-05-19/ee-tl-self-diff.json",
+      "purpose": "Self-diff smoke-test diagnostic for cached Estonian TL parsed summary with per-service records",
+      "sha256": "36dec3ac46162875d6625b6b3cbaccaaedf3abff2f42fbb423792e0f51ba6b22",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "snapshots/2026-05-19/ee-tl.xml",
+      "purpose": "Estonian trusted-list XML research snapshot",
+      "sha256": "085f33f10edc50aae1228acbcf7c199e4aebdd5130d39cc8c2437e09f4fadafe",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "snapshots/2026-05-19/ee-tl.xml.meta.json",
+      "purpose": "Fetch metadata for Estonian trusted-list snapshot",
+      "sha256": "3f8556d3feb950a73cf189c7bc165b6eba31d5d717081f5107690efbb6c2cc34",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "snapshots/2026-05-19/eu-lotl.xml",
+      "purpose": "EU LOTL XML research snapshot",
+      "sha256": "aeddb7337486ac9f2e50448f7f61586cfa6acfcd38819a80f4246e4e0d6f4772",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "snapshots/2026-05-19/eu-lotl.xml.meta.json",
+      "purpose": "Fetch metadata for EU LOTL snapshot",
+      "sha256": "b48caf740b32259c8b2b568519ae3f7e0c7d1ec7745720c2947e68ffcacfae26",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "snapshots/2026-05-19/failure-mode-claim-coverage.json",
+      "purpose": "Failure-mode claim and reference coverage diagnostic",
+      "sha256": "c6140c519601e5f468f81116f38339bf29772ed102eab920d0be6b77795cee68",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "snapshots/2026-05-19/figure-01-working-state-decision.json",
+      "purpose": "Editorial decision retaining Figure 01 as a v0.2 working-state diagram while preserving the frozen v0.1 bundle copy",
+      "sha256": "2bacb00745beebd5dd568107cd6296f1f871716e2c8327c87b785116a7efa9e6",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "snapshots/2026-05-19/figure-reference-coverage.json",
+      "purpose": "Figure-reference coverage diagnostic for chapter and bundle references",
+      "sha256": "d8b33c6433e4d5c3967899294bbd5636df6a6d4715ecd6a2a2cb5eeb898b1de5",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "snapshots/2026-05-19/lotl-parsed.json",
+      "purpose": "Parsed EU LOTL summary regenerated after core-tooling recovery repair",
+      "sha256": "1c7e540ba3136b1f0b020cba2ce2ea8b59918129ee9d8631074142fcc34277b9",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "snapshots/2026-05-19/lotl-self-diff.json",
+      "purpose": "Self-diff smoke-test diagnostic for cached EU LOTL parsed summary",
+      "sha256": "273dac536398c73e5457be29bb3c06a7f6b36868d2603ea817944e1b2b6b7749",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "snapshots/2026-05-19/preflight-command-example-check.json",
+      "purpose": "v0.2 preflight diagnostic report: Preflight Command Example Check",
+      "sha256": "4670673725ef35f4b52901b2ce724dc20aef7885bda2fa02236b27342c677e4d",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "snapshots/2026-05-19/preflight-command-order-coverage.json",
+      "purpose": "v0.2 preflight command-order coverage diagnostic report",
+      "sha256": "87685bc8dc617e421743777468fc36e6aadb7c135f2a5463da88641bb26295ed",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "snapshots/2026-05-19/preflight-evidence-pointer-coverage.json",
+      "purpose": "v0.2 preflight diagnostic report: Preflight Evidence Pointer Coverage",
+      "sha256": "7e24ede67820088815004826c6268f8f6ccc0e58acbf00b396d5ce604284e490",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "snapshots/2026-05-19/preflight-gate-documentation-coverage.json",
+      "purpose": "v0.2 preflight diagnostic report: Preflight Gate Documentation Coverage",
+      "sha256": "68d4db21f28d358cb74f61a5ed7de4ee5a136e9be7db9a2507f96f10386c6f71",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "snapshots/2026-05-19/preflight-status-summary-generator-traceability.json",
+      "purpose": "Preflight status-summary generator traceability diagnostic report",
+      "sha256": "f9c1befb7e46904b08880396b7a787f23bd4c8701c8d015876ee2e44c9c489a4",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "snapshots/2026-05-19/preflight-status-summary-sync.json",
+      "purpose": "v0.2 preflight status-summary synchronization diagnostic report",
+      "sha256": "a7ea3124e6b1590fdb13729034493bde60bed74b7ed50721528a7651d842a864",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "snapshots/2026-05-19/preflight-volatile-hash-policy.json",
+      "purpose": "v0.2 preflight diagnostic report: Preflight Volatile Hash Policy",
+      "sha256": "9ac02d066030fc96679614fe18bdace2feb87863ae57ec6c077bd18badd5d132",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "snapshots/2026-05-19/preflight-volatile-hash-sync.json",
+      "purpose": "v0.2 preflight diagnostic report: Preflight Volatile Hash Sync",
+      "sha256": "93e91c1c72ca3be3e05765569a066afca294dfd200244ee1e9b3e4a3ef564500",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "snapshots/2026-05-19/recovery-audit-v0.1-v0.2.json",
+      "purpose": "Recovery audit report regenerated after core-tooling repair and working-state classification update",
+      "sha256": "c4643de46d708f4e63d56914d4372f23548b698c54ff3b5739abc8a71e359b20",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "snapshots/2026-05-19/reference-consistency-review-current.json",
+      "purpose": "Reference consistency diagnostic regenerated after duplicate-reference classifier citation",
+      "sha256": "38d26679a6a8adf4b135700c0baff043f9a4169656d079820582ad1261c2cb91",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "snapshots/2026-05-19/reference-consistency-review-current.json",
+      "purpose": "Current local path reference consistency diagnostic regenerated after status-summary sync integration",
+      "sha256": "8080ffc4897affa1e1a1850914d12ca93144570ce9d2ba738a185720d50d0912",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "snapshots/2026-05-19/references-preflight-diagnostics-coverage.json",
+      "purpose": "v0.2 preflight diagnostic report: References Preflight Diagnostics Coverage",
+      "sha256": "86633a677fd8ad8b44465b09f2e38931f1b2dcf4520c0e814cfad6c97e57aaf1",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "snapshots/2026-05-19/references-reviewed-bundle-deltas-coverage.json",
+      "purpose": "v0.2 preflight diagnostic report: References Reviewed Bundle Deltas Coverage",
+      "sha256": "d48b12b7429d232471a3eb1da9ee724c7f3384734014fc715e0d7f15d69e2bed",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "snapshots/2026-05-19/release-claim-safety-review.json",
+      "purpose": "Claim-safety review diagnostic for the release draft",
+      "sha256": "f0d21bdcb69856464bbc637d30beb9a0ac743a08d2fdf4ef159e9064fa2f783a",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "snapshots/2026-05-19/release-evidence-lineage-review.json",
+      "purpose": "v0.2 preflight diagnostic report: Release Evidence Lineage Review",
+      "sha256": "c154ad0a5447e4a2ba5cac4ab93da1453c7122a1ee6ba15b9202aa84933b6df0",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "snapshots/2026-05-19/snapshot-date-lineage-review.json",
+      "purpose": "Snapshot-date lineage diagnostic regenerated after status-summary sync integration",
+      "sha256": "6731ded7543e1d718c9a3ddd36c0a32408d513c7267879f9406ea02b59c8b200",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "snapshots/2026-05-19/snapshot-date-lineage-review.json",
+      "purpose": "Snapshot date-lineage diagnostic regenerated after duplicate-reference classifier citation",
+      "sha256": "74c896c4247e84bac6f7ae3de42ace9fd9fe083a61174383de1bc27dabb9b640",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "snapshots/2026-05-19/snapshot-lineage-editorial-decision.json",
+      "purpose": "v0.2 preflight diagnostic report: Snapshot Lineage Editorial Decision",
+      "sha256": "99e9d9e7bb6b67af65c8a36871e74813407c2cdb750821884a5002cfe42b0992",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "snapshots/2026-05-19/snapshot-reference-consistency-review.json",
+      "purpose": "Snapshot date-lineage reference consistency diagnostic",
+      "sha256": "fdd00a45d960940d78f2ee772e549ea395ce20c105a4cd20d157a99a19e8c94f",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "snapshots/2026-05-19/tooling-command-example-check.json",
+      "purpose": "v0.2 preflight diagnostic report: Tooling Command Example Check",
+      "sha256": "523e626f9fa3ab466ede678c3e941968a4a58ac5f553a9bcb5632b4f36c447e2",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "snapshots/2026-05-19/tooling-command-example-check.json",
+      "purpose": "Tooling appendix command-example diagnostic regenerated after documenting the ledger table-shape diagnostic",
+      "sha256": "64f4d5122b6814ddbf1ac55ce2b437445809f35cd21df62df868c1b576245e72",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "snapshots/2026-05-19/tooling-command-example-check.json",
+      "purpose": "Tooling appendix command-example diagnostic regenerated after duplicate-reference classifier documentation",
+      "sha256": "8a6f88be38c292182daf2e38d8e4632fbb9687f229d6f4e7d46ef11c0cda0787",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "snapshots/2026-05-19/v02-preflight-checklist-coverage.json",
+      "purpose": "v0.2 preflight diagnostic report: V02 Preflight Checklist Coverage",
+      "sha256": "deb4de1c55af5a632df5da9025f2a781a988f12c38a507667032c9aca74995cc",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "tooling/check_ledger_table_shape.py",
+      "purpose": "Editorial diagnostic checking persistent Markdown ledger table shape, malformed rows, and duplicate path-reference pressure",
+      "sha256": "b21e7a7f4f8f4d219d97e811da29c017b0cb673189d17d5cbbd60a181edbc659",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "tooling/check_preflight_command_examples.py",
+      "purpose": "Editorial diagnostic for checking inline v0.2 preflight checklist tooling commands against local script existence and --help option flags",
+      "sha256": "fa7cc7785f199dcb6f0ec7e83bf1db6b1a7a3eb89157c5ea3fe6c775df39a300",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "tooling/check_preflight_command_order.py",
+      "purpose": "Editorial diagnostic checking v0.2 preflight checklist command dependency order, updated to include status-summary synchronization",
+      "sha256": "d402604d8d96bb568724c976c36a4d30766a3e922d02d32f779e846bd24f1bb5",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "tooling/check_preflight_crosswalk.py",
+      "purpose": "Editorial diagnostic checking mandatory v0.2 preflight diagnostic outputs across checklist, references, and persistent ledgers",
+      "sha256": "539797380f946e61f049172a79b7c6e26c3013635f4e02c916d57713316c375f",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "tooling/check_preflight_evidence_pointers.py",
+      "purpose": "Editorial diagnostic for checking v0.2 preflight checklist evidence-pointer coverage, updated to require status-summary sync report",
+      "sha256": "6912bf261ccbb1cf347a750ed0cb2f2157233c2dc49e27ccd9d425080cfbe543",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "tooling/check_preflight_gate_documentation.py",
+      "purpose": "Editorial diagnostic checking v0.2 preflight gates for tooling appendix documentation or checklist-only rationale",
+      "sha256": "58efb5c16863d2b1bcb6b55bf052a19557f7ed8cbe59b1e3a27a3d89c4b84928",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "tooling/check_preflight_ledger_coverage.py",
+      "purpose": "Editorial diagnostic checking mandatory v0.2 preflight diagnostic outputs across SOURCES, CLAIMS, and ARTIFACT_INDEX ledgers",
+      "sha256": "791673a4b73c1cebd7dcd7f2ae7b49f9ed4e569c96ebc29aaf15b1c5ba2e2518",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "tooling/check_preflight_status_summary_generator_traceability.py",
+      "purpose": "Editorial diagnostic checking traceability for the v0.2 preflight status-summary generator gate",
+      "sha256": "db4697298d49b3ce206b1cd3978925ae27e1e1b724c329c862a88fde4ada1da9",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "tooling/check_preflight_status_summary_sync.py",
+      "purpose": "Editorial diagnostic checking v0.2 preflight status-summary synchronization with checklist evidence pointers",
+      "sha256": "ea87edcc57f782f86461a63635fe6cac582a545b9f2d7381493dd1b0e415c983",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "tooling/check_preflight_volatile_hash_policy.py",
+      "purpose": "Editorial diagnostic checking documented hash-deferred policy for volatile mutually dependent preflight reports",
+      "sha256": "5f0f467384c19ba3546a711a3c1a33ddd6a95d990f55b89d24d60cc70d0129cf",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "tooling/check_preflight_volatile_hash_sync.py",
+      "purpose": "`67e24e02cbb67ca5e2d26c254929a506b6aaed37f54efd833943b2182b1fb368`",
+      "sha256": "67e24e02cbb67ca5e2d26c254929a506b6aaed37f54efd833943b2182b1fb368",
+      "verified": "Verified by local SHA-256 computation on 2026-05-19 after volatile hash synchronization integration."
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "tooling/check_recovery_audit.py",
+      "purpose": "Editorial recovery diagnostic updated to classify post-v0.1 check_*.py tools and v0.2 status summary as intentional working-state files",
+      "sha256": "7cd812018d0eba9e80863c887ffd74fd0a369df079bc486a2db2c0343ca150b3",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "tooling/check_references_preflight_diagnostics.py",
+      "purpose": "Editorial diagnostic for checking that references cite v0.2 preflight diagnostic outputs named by the checklist",
+      "sha256": "4a80b6fcc973feeed01a4e93f202a996f70961f45eff959264e67f134048c481",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "tooling/check_references_reviewed_bundle_deltas.py",
+      "purpose": "Editorial diagnostic for checking that references cite reviewed recovery-audit bundle-delta decision files",
+      "sha256": "b5778e46c6f4d06618dd8218af322494bee4db185ede73318dee17ccfae59735",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "tooling/check_release_evidence_lineage.py",
+      "purpose": "Editorial diagnostic for release Markdown and bundle manifest evidence-lineage coherence",
+      "sha256": "5abdbe5afc15aec1b6c4ab4afc6d9b2cc71572b3090bc432a579643d0b487515",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "tooling/check_snapshot_date_lineage.py",
+      "purpose": "Editorial diagnostic for concrete snapshot-date lineage references across chapter/release/state Markdown files",
+      "sha256": "a8c7681b873b787f5db8544e36988563a8bc19ce05ab074dd08e164571366e69",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "tooling/check_tooling_command_examples.py",
+      "purpose": "Editorial diagnostic for checking documented tooling command examples against local script existence and --help option flags",
+      "sha256": "cca3db5a0cbc92c86693112f8d9e4cb7a054c8f19fdc4504b4166cae93efd9b8",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "tooling/check_v02_preflight_checklist.py",
+      "purpose": "Editorial diagnostic for v0.2 release-preflight checklist gate and boundary coverage, updated to require status-summary synchronization gate",
+      "sha256": "bfcc7f279c5584b446c1c98eaccbcc47c16a29fd5737ac8ef652fec14f651916",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "tooling/classify_ledger_duplicate_references.py",
+      "purpose": "Persistent-ledger duplicate-reference classifier distinguishing cross-ledger provenance repetition from same-ledger review candidates",
+      "sha256": "58843e19a623eb59900308903bb5495a2cf4b163b03706925199385a7cfba419",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "tooling/diff_tl.py",
+      "purpose": "Diff parsed trusted-list JSON summaries with metadata, service, pointer, and certificate-fingerprint change fields",
+      "sha256": "5f8d2932eb5448ea64126b9f994172d19ee217ea9885f5c35486a383811886c6",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "tooling/fetch_tl.py",
+      "purpose": "Fetch trusted-list XML snapshots and write metadata",
+      "sha256": "7c948812ccced504539d150e8f8abafb2489e70690aeb289dbfa472225762593",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "tooling/generate_preflight_status_summary.py",
+      "purpose": "Editorial helper that generates the v0.2 preflight status summary from checklist evidence pointers",
+      "sha256": "7768fc491c2a4f08f3ce42df4a42df3c9c6f04668eb6342c45048e4f41264ed7",
+      "verified": "yes"
+    },
+    {
+      "lane": "pki-atlas-trusted-lists",
+      "path": "tooling/parse_tl.py",
+      "purpose": "Parse LOTL/TL XML into compact JSON summaries with list metadata, TL service records, status-starting times, service-history counts, and certificate SHA-256 fingerprints",
+      "sha256": "1e9f0fc846cb244239506e679c06b55d603656417b5c5b73e72c012f8a593469",
+      "verified": "yes"
+    },
+    {
+      "lane": "road2pq-shadow",
+      "path": "ARTIFACT_INDEX.md",
+      "purpose": "Artifact path, purpose, SHA-256, and verification ledger.",
+      "sha256": "e22b9ef8a0c79018c3e4924dce5e02848ec2c9b370c9d55b8099315aeba1498d",
+      "verified": "yes"
+    },
+    {
+      "lane": "road2pq-shadow",
+      "path": "CLAIMS.md",
+      "purpose": "Human-readable claim-safety ledger and TLS/hybrid-KEX observation notes.",
+      "sha256": "bd62bb1e73657d76cd68f69aa31daed2a129de04eeabb1b4c5b4ddffc5f22f16",
+      "verified": "yes"
+    },
+    {
+      "lane": "road2pq-shadow",
+      "path": "HERMES_PROGRESS.md",
+      "purpose": "Append-only progress diary.",
+      "sha256": "78cf296044b9eeaee6bb867ceafe2ea2d8df973629f13c4996ef7da99987c8a5",
+      "verified": "yes"
+    },
+    {
+      "lane": "road2pq-shadow",
+      "path": "PLAN.md",
+      "purpose": "Frozen mission, scope, and first ten steps for this lane.",
+      "sha256": "588572efd5abc5d3737206cb9cb0f266127ce7df311d9aebb0595b35a89b51d5",
+      "verified": "yes"
+    },
+    {
+      "lane": "road2pq-shadow",
+      "path": "SOURCES.md",
+      "purpose": "External and local reference ledger.",
+      "sha256": "cfd4772e10fa7a5ebc76c669dbce52d84f6bf4caa27cdbbaa92273cc79a269f1",
+      "verified": "yes"
+    },
+    {
+      "lane": "road2pq-shadow",
+      "path": "claims/checkable.jsonl",
+      "purpose": "13 empirically or externally checkable claims from the first extraction batch, with check-method notes.",
+      "sha256": "f73bc7b7ae81b59b8b7d7342f66011fbe3747c873ee50bf1d8699970807f918b",
+      "verified": "yes"
+    },
+    {
+      "lane": "road2pq-shadow",
+      "path": "claims/extracted.jsonl",
+      "purpose": "30 structured claims extracted from ROAD2PQ report sections 1-3.",
+      "sha256": "62cafd9e1b9bb4402aae0cb24a15c44e7336e643f449f82b398f2ce82f70a060",
+      "verified": "yes"
+    },
+    {
+      "lane": "road2pq-shadow",
+      "path": "experiments/hybrid-kex/Dockerfile",
+      "purpose": "Recipe container for local OpenSSL + liboqs + oqs-provider experiments; not run in this iteration.",
+      "sha256": "9d91d378591807a14fd06609f34ff426a82ddc148f51677eb5eb1feebd988d37",
+      "verified": "yes"
+    },
+    {
+      "lane": "road2pq-shadow",
+      "path": "experiments/hybrid-kex/Dockerfile.bundle/claims.json",
+      "purpose": "MIRROR bundle claims for the hybrid-KEX Dockerfile recipe.",
+      "sha256": "644540fb5472a900d9b4a2c5b0b809eb862a7e437d8bbaae9f17db6ad659d7b7",
+      "verified": "yes"
+    },
+    {
+      "lane": "road2pq-shadow",
+      "path": "experiments/hybrid-kex/Dockerfile.bundle/manifest.json",
+      "purpose": "MIRROR bundle manifest for the hybrid-KEX Dockerfile recipe.",
+      "sha256": "70b03427df27919ab439780d609a70f6176a6d7ad3bc4cfde1c62ce5bc09f498",
+      "verified": "yes"
+    },
+    {
+      "lane": "road2pq-shadow",
+      "path": "experiments/hybrid-kex/Dockerfile.bundle/notes.md",
+      "purpose": "MIRROR bundle notes for the hybrid-KEX Dockerfile recipe.",
+      "sha256": "30933a07ab6f55d231e046473efcf5743b07accb548b8cd8c69609575832149b",
+      "verified": "yes"
+    },
+    {
+      "lane": "road2pq-shadow",
+      "path": "experiments/hybrid-kex/Dockerfile.bundle/sources/lane-scope-record.json",
+      "purpose": "Bundle source record for ROAD2PQ-SHADOW local-only scope.",
+      "sha256": "2d3b4b18af3a85abb17c89818b9070a01a173911a60188a1e3dce48541aeb911",
+      "verified": "yes"
+    },
+    {
+      "lane": "road2pq-shadow",
+      "path": "experiments/hybrid-kex/Dockerfile.bundle/sources/open-quantum-safe-source-record.json",
+      "purpose": "Bundle source record for Open Quantum Safe upstream repositories.",
+      "sha256": "9e5335e38a64ff53e18f028cb03171af24efc68e6ddabdfab0c88ff778a44444",
+      "verified": "yes"
+    },
+    {
+      "lane": "road2pq-shadow",
+      "path": "experiments/hybrid-kex/README.md",
+      "purpose": "Localhost-only hybrid-KEX experiment recipe and matrix.",
+      "sha256": "b0dacd918c60e5c58c929c7ece7a0fb0fa9441c3b5524efc2dcf5439a9cb953d",
+      "verified": "yes"
+    },
+    {
+      "lane": "road2pq-shadow",
+      "path": "experiments/hybrid-kex/README.md.bundle/claims.json",
+      "purpose": "MIRROR bundle claims for the hybrid-KEX README recipe.",
+      "sha256": "39f96a5590d0552b646482523e73e13bcf62f80b682e62e013b0564cd75e071b",
+      "verified": "yes"
+    },
+    {
+      "lane": "road2pq-shadow",
+      "path": "experiments/hybrid-kex/README.md.bundle/manifest.json",
+      "purpose": "MIRROR bundle manifest for the hybrid-KEX README recipe.",
+      "sha256": "48ff8c1dac742f51bc7104eccbfb0b5546a651de4b29b49db91ec4956dabdf46",
+      "verified": "yes"
+    },
+    {
+      "lane": "road2pq-shadow",
+      "path": "experiments/hybrid-kex/README.md.bundle/notes.md",
+      "purpose": "MIRROR bundle notes for the hybrid-KEX README recipe.",
+      "sha256": "561e369179f90fbc41ca476ed9aff8dc84ab775a34f019c45a257164c27d0f92",
+      "verified": "yes"
+    },
+    {
+      "lane": "road2pq-shadow",
+      "path": "experiments/hybrid-kex/README.md.bundle/sources/lane-scope-record.json",
+      "purpose": "Bundle source record for ROAD2PQ-SHADOW local-only scope.",
+      "sha256": "2d3b4b18af3a85abb17c89818b9070a01a173911a60188a1e3dce48541aeb911",
+      "verified": "yes"
+    },
+    {
+      "lane": "road2pq-shadow",
+      "path": "experiments/hybrid-kex/README.md.bundle/sources/open-quantum-safe-source-record.json",
+      "purpose": "Bundle source record for Open Quantum Safe upstream repositories.",
+      "sha256": "9e5335e38a64ff53e18f028cb03171af24efc68e6ddabdfab0c88ff778a44444",
+      "verified": "yes"
+    },
+    {
+      "lane": "road2pq-shadow",
+      "path": "experiments/hybrid-kex/run_matrix.py",
+      "purpose": "Loopback-only TLS 1.3 matrix runner for later local hybrid-KEX experiments.",
+      "sha256": "a2a55c04efdfa16f44d842ef51dcb87caabe95ae011901186c0c7652e31fc4fa",
+      "verified": "yes"
+    },
+    {
+      "lane": "road2pq-shadow",
+      "path": "observatory/endpoints.yaml",
+      "purpose": "Curated seed list of five public Estonian government endpoints derived from report-printed URLs for read-only TLS handshake observation.",
+      "sha256": "cda6197d3c58fa303800ccb7cf6fec10b2d96e5914eb6cca3e2141f7d9fc788c",
+      "verified": "yes"
+    },
+    {
+      "lane": "road2pq-shadow",
+      "path": "observatory/excluded.md",
+      "purpose": "Endpoint candidates deferred or excluded from the initial seed list with scope reasons.",
+      "sha256": "f8019b8c67981c4c6c166fe4d3af4fdc3f40eb780892586de9220f9304b046c0",
+      "verified": "yes"
+    },
+    {
+      "lane": "road2pq-shadow",
+      "path": "observatory/probe.py",
+      "purpose": "Read-only TLS handshake probe script for ROAD2PQ-SHADOW step 8.",
+      "sha256": "06f3eff7e282fad44d220e97f6b0f254cdd7403933e82352948a5420f838850a",
+      "verified": "yes"
+    },
+    {
+      "lane": "road2pq-shadow",
+      "path": "observatory/runs/2026-05-19/www.eesti.ee.json",
+      "purpose": "Required step-8 dry-run TLS handshake record for www.eesti.ee; no HTTP request bytes sent.",
+      "sha256": "6128eb784cd9191ed2470c516e11a76cf61485e4c24a8e134245ec11d5fac828",
+      "verified": "yes"
+    },
+    {
+      "lane": "road2pq-shadow",
+      "path": "observatory/runs/2026-05-19/www.eesti.ee.json.bundle/claims.json",
+      "purpose": "Structured claims for the www.eesti.ee dry-run evidence bundle.",
+      "sha256": "cd79c4b091bbfd11a29d91d05f3d915c17161fdf77db8e0e617e19f74a110c61",
+      "verified": "yes"
+    },
+    {
+      "lane": "road2pq-shadow",
+      "path": "observatory/runs/2026-05-19/www.eesti.ee.json.bundle/manifest.json",
+      "purpose": "MIRROR evidence-bundle manifest for the www.eesti.ee dry-run artifact.",
+      "sha256": "30aaaf49153582aec4a3304a6af889a83be7b09f378701b11f139bd6ffb0b432",
+      "verified": "yes"
+    },
+    {
+      "lane": "road2pq-shadow",
+      "path": "observatory/runs/2026-05-19/www.eesti.ee.json.bundle/notes.md",
+      "purpose": "Methodology and limitations notes for the www.eesti.ee dry-run evidence bundle.",
+      "sha256": "2bfb9be02cb5ac0ab86c9c53cb1d83bcca07a5e21693ec8df9f466863ca02774",
+      "verified": "yes"
+    },
+    {
+      "lane": "road2pq-shadow",
+      "path": "observatory/runs/2026-05-19/www.eesti.ee.json.bundle/sources/probe.py",
+      "purpose": "Bundle-local copy of the TLS probe script used for the dry-run.",
+      "sha256": "06f3eff7e282fad44d220e97f6b0f254cdd7403933e82352948a5420f838850a",
+      "verified": "yes"
+    },
+    {
+      "lane": "road2pq-shadow",
+      "path": "observatory/runs/2026-05-19/www.eesti.ee.json.bundle/sources/www-eesti-ee-url-record.json",
+      "purpose": "Bundle URL-record descriptor for the eesti.ee dry-run target.",
+      "sha256": "10956f784246bc6cf1a1e6b7921da225c91ba98b43a2d547204feb460f1c78ca",
+      "verified": "yes"
+    },
+    {
+      "lane": "road2pq-shadow",
+      "path": "observatory/runs/2026-05-19/www.eesti.ee.json.bundle/verify-result.json",
+      "purpose": "Local MIRROR verifier output for the www.eesti.ee dry-run bundle.",
+      "sha256": "a1653880e2c2e536035ce5ca4217d12ea6ce43ba684ed9294796f3039d4136fe",
+      "verified": "yes"
+    },
+    {
+      "lane": "road2pq-shadow",
+      "path": "paper/draft.md",
+      "purpose": "Working preprint draft outline and growing paper for \"Estonia ROAD2PQ: an independent technical re-evaluation\".",
+      "sha256": "c5244304f0d0e7ce90a8c75ee2be410ca03227b2d14d9ce70c4f9b40aa8e7cf5",
+      "verified": "yes"
+    },
+    {
+      "lane": "road2pq-shadow",
+      "path": "paper/draft.md.bundle/claims.json",
+      "purpose": "MIRROR evidence-bundle claims for the working preprint draft.",
+      "sha256": "b4f94dbcab35b4e6e983ab4847ddd98f75840c5c99b61fb6128144398a966feb",
+      "verified": "yes"
+    },
+    {
+      "lane": "road2pq-shadow",
+      "path": "paper/draft.md.bundle/manifest.json",
+      "purpose": "MIRROR evidence-bundle manifest for the working preprint draft.",
+      "sha256": "cdb1102ab10c7e3010b61c180d24e030b26f5af170eff20405c584bae676c6d9",
+      "verified": "yes"
+    },
+    {
+      "lane": "road2pq-shadow",
+      "path": "paper/draft.md.bundle/notes.md",
+      "purpose": "MIRROR evidence-bundle notes for the working preprint draft.",
+      "sha256": "ab433bb020cf2139e17a931926aba5e2cc393b2a021c973e4d40e0b4cd64a23b",
+      "verified": "yes"
+    },
+    {
+      "lane": "road2pq-shadow",
+      "path": "paper/draft.md.bundle/verify-result.json",
+      "purpose": "Local MIRROR verifier output for the working preprint draft bundle.",
+      "sha256": "e415f0ae6abb349547e0903b94b72fc0f172a196be74d3260c30294a735b7d3c",
+      "verified": "yes"
+    },
+    {
+      "lane": "road2pq-shadow",
+      "path": "paper/references.bib",
+      "purpose": "BibTeX references initialized with the Cybernetica report.",
+      "sha256": "1cadcbc8bc7b305a1219f4ffe5f6b4d687fe083279ac0b93f6b94c7957681179",
+      "verified": "yes"
+    },
+    {
+      "lane": "road2pq-shadow",
+      "path": "sources/road2pq/extracted/full.txt",
+      "purpose": "Full pdftotext extraction for local search and claim extraction.",
+      "sha256": "b63a01c31049a5495d098151946bf56252218240e9ee82e79a429022024288b8",
+      "verified": "yes"
+    },
+    {
+      "lane": "road2pq-shadow",
+      "path": "sources/road2pq/extracted/pages-001-012.txt",
+      "purpose": "Text extraction of report pages 1\u201312 for table of contents and initial reading.",
+      "sha256": "e81137b5f53de646a7ab8a404a15dd7a51bfe7a940d24ec990d9c272afd9ef62",
+      "verified": "yes"
+    },
+    {
+      "lane": "road2pq-shadow",
+      "path": "sources/road2pq/index.md",
+      "purpose": "English topic index with Estonian section labels.",
+      "sha256": "9ba85c7a2798a9671bd29ab4537cb11ed64089432eeb6fcac314168651d15351",
+      "verified": "yes"
+    },
+    {
+      "lane": "road2pq-shadow",
+      "path": "sources/road2pq/meta.json",
+      "purpose": "Download metadata and SHA-256 for the report PDF.",
+      "sha256": "f1bc0518ced7acc6c406547ca2eaaba31dc13227007d0f68c9125ed0610b3cf5",
+      "verified": "yes"
+    },
+    {
+      "lane": "road2pq-shadow",
+      "path": "sources/road2pq/road2pq-v1.0.pdf",
+      "purpose": "Original Cybernetica ROAD2PQ report PDF.",
+      "sha256": "6bd753476cd726628c74ced060511263995fe89d20cd877aabf214c0bc48d90f",
+      "verified": "yes"
+    }
+  ],
+  "entry_count": 195,
+  "merkle_root": "5e8e1dc1fd7a3b5222a5961cd684b23d00483f4d2029869f8b73139b0fd2a7ad",
+  "missing_indexes": [],
+  "note": "Local research anchor only; no external timestamping or regulated trust service is performed.",
+  "schema": "mirror.daily-roll-up.v0.1",
+  "source_indexes": [
+    "omitted-private-workspace-path/model-card-x-ray/ARTIFACT_INDEX.md",
+    "omitted-private-workspace-path/road2pq-shadow/ARTIFACT_INDEX.md",
+    "omitted-private-workspace-path/pki-atlas-trusted-lists/ARTIFACT_INDEX.md",
+    "omitted-private-workspace-path/echo/ARTIFACT_INDEX.md"
+  ]
+}

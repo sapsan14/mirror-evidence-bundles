@@ -1,0 +1,35 @@
+{
+  "claims": [
+    {
+      "evidence": [
+        {
+          "pointer": "S1",
+          "source_id": "S1"
+        }
+      ],
+      "id": "C1",
+      "notes": "Generated from CLI arguments; review before publication.",
+      "review_status": "draft",
+      "risk": "medium",
+      "safe_wording": "The release candidate is a local reproducibility package, not a public certification or legal/compliance result.",
+      "text": "The release candidate is a local reproducibility package, not a public certification or legal/compliance result."
+    },
+    {
+      "evidence": [
+        {
+          "pointer": "S2",
+          "source_id": "S2"
+        }
+      ],
+      "id": "C2",
+      "notes": "Generated from CLI arguments; review before publication.",
+      "review_status": "draft",
+      "risk": "medium",
+      "safe_wording": "The package states explicit limitations for verifier semantics and publication readiness.",
+      "text": "The package states explicit limitations for verifier semantics and publication readiness."
+    }
+  ],
+  "schema": "urn:tyche:mirror:claims:0.1",
+  "schema_id": "urn:tyche:mirror:claims:0.1",
+  "schema_version": "0.1.0"
+}

@@ -1,0 +1,71 @@
+{
+  "artifact": {
+    "media_type": "text/markdown",
+    "name": "artifact.md",
+    "path": "artifact.md",
+    "role": "other",
+    "sha256": {
+      "algorithm": "SHA-256",
+      "value": "aab2926b0317e21245ef765d48c164ff12b9b3f73985cbe73e61da6b8dee0544"
+    }
+  },
+  "assumptions": [
+    {
+      "id": "A-0001",
+      "risk": "low",
+      "text": "HTTPS sources are recorded as local descriptor files and are not fetched by this bundler."
+    },
+    {
+      "id": "A-0002",
+      "risk": "medium",
+      "text": "Generated claims require human review before publication."
+    }
+  ],
+  "attestation": {
+    "note": "MIRROR produces compatible-shape evidence bundles but does not sign them.",
+    "signature_profile": null,
+    "signed": false
+  },
+  "bundle_created_at": "2026-05-18T23:59:51Z",
+  "claims_file": {
+    "path": "claims.json",
+    "sha256": {
+      "algorithm": "SHA-256",
+      "value": "6f8ea36c650b11db5a4cadd51335fd515d93edd5ffefad245be95bbf9d36a835"
+    }
+  },
+  "created_by": {
+    "affiliation": "Tyche Institute, Tallinn, Estonia",
+    "lane": "mirror",
+    "tool": "bundle.py",
+    "tool_version": "0.1.0"
+  },
+  "schema": "urn:tyche:mirror:bundle:0.1",
+  "schema_version": "0.1.0",
+  "sources": [
+    {
+      "accessed_at": "2026-05-18T23:59:51Z",
+      "id": "S-0001",
+      "kind": "local_file",
+      "path": "sources/source-1.txt",
+      "reliability": "Local file copied into bundle",
+      "sha256": {
+        "algorithm": "SHA-256",
+        "value": "b36a53bfb2953d1976ba1c64393c634e6b7e72fe497d9ae6bf1f26a3661d31b7"
+      },
+      "source_path": "examples/bad-artifact-traversal/source-note.txt",
+      "title": "source-note.txt"
+    }
+  ],
+  "verification": {
+    "expected_verifier": "verify.py",
+    "offline_only": true,
+    "semantics": [
+      "rehash_artifact",
+      "rehash_sources",
+      "rehash_claims_file",
+      "validate_manifest_schema",
+      "validate_claims_schema"
+    ]
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "artifact": {
+    "media_type": "text/markdown",
+    "path": "artifact/minimal-artifact.md",
+    "sha256": {
+      "algorithm": "SHA-256",
+      "value": "50ceb0cf5955eca9646abe5147d2b0b3c612643256852d874071fa73b5175b78"
+    },
+    "title": "minimal-artifact"
+  },
+  "assumptions": [
+    {
+      "id": "A1",
+      "impact": "medium",
+      "text": "Generated claims require human review before publication."
+    },
+    {
+      "id": "A2",
+      "impact": "low",
+      "text": "HTTPS source inputs are recorded as descriptor files and are not fetched by this bundler."
+    },
+    {
+      "id": "A-PATH-POLICY",
+      "impact": "low",
+      "text": "Public-facing metadata omits private absolute filesystem paths; this is a local private review bundle, not publication, signing, or timestamping."
+    }
+  ],
+  "attestation": {
+    "signature_profile": null,
+    "signed": false,
+    "timestamped": false
+  },
+  "bundle_created_at": "2026-05-19T09:44:59Z",
+  "claims_file": {
+    "path": "claims.json",
+    "sha256": {
+      "algorithm": "SHA-256",
+      "value": "d79b8e323b27fad6f07433ce6683f57bc4b2aeace8bedeb6a3c478ca4e5b415e"
+    }
+  },
+  "compatibility": {
+    "eatf_compatible_shape": true,
+    "signature_profile": "none",
+    "signed": false,
+    "statement": "This MIRROR bundle records reproducible provenance for research artifacts. It is unsigned and is not a qualified electronic signature, qualified timestamp, or other eIDAS-regulated trust service.",
+    "timestamped": false
+  },
+  "created": "2026-05-19T09:44:59Z",
+  "created_by": {
+    "affiliation": "Tyche Institute, Tallinn, Estonia",
+    "lane": "mirror",
+    "location": "Tallinn, Estonia",
+    "name": "Tyche Institute",
+    "orcid": "0000-0003-2452-7096",
+    "tool": "bundle.py 0.1.0"
+  },
+  "schema": "urn:tyche:mirror:bundle:0.1",
+  "schema_id": "urn:tyche:mirror:bundle:0.1",
+  "schema_version": "0.1.0",
+  "sources": [
+    {
+      "accessed": "2026-05-19",
+      "id": "S1",
+      "kind": "local_file",
+      "notes": "Copied into this local bundle from package-relative review material; private workspace paths are intentionally omitted.",
+      "path": "sources/S1-minimal-source.txt",
+      "reliability": "primary",
+      "sha256": {
+        "algorithm": "SHA-256",
+        "value": "a4c470e1d6bdba0dd916b995ecb00ae529550b3d0b1b8c00967d2b0ffe9eea60"
+      },
+      "title": "minimal-source.txt"
+    }
+  ],
+  "verification": {
+    "checks": [
+      "manifest_schema",
+      "claims_schema",
+      "artifact_hash",
+      "claims_hash",
+      "source_hashes",
+      "claim_source_links",
+      "notes_present"
+    ],
+    "hash_algorithm": "sha256",
+    "network_required": false,
+    "offline_only": true,
+    "semantics": [
+      "offline_hash_replay",
+      "schema_validation"
+    ]
+  }
+}

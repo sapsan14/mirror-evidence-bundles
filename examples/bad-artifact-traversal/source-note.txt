@@ -1,0 +1,1 @@
+Local source note for the artifact traversal known-bad MIRROR fixture.

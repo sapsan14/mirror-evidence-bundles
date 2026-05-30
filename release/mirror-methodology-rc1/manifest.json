@@ -1,0 +1,150 @@
+{
+  "created_at": "2026-05-19T09:45:59Z",
+  "status": "private-release-candidate-not-published",
+  "title": "MIRROR methodology release candidate rc1",
+  "files": [
+    {
+      "path": "CLAIMS.md",
+      "sha256": "dedb9b90de95e7bc7c2225621aa5db4c815e3704691583767d1c4b1e4ae1f1bb",
+      "bytes": 891
+    },
+    {
+      "path": "DATA_STATEMENT.md",
+      "sha256": "b1eccbcab99fedf87365e8350725178230f0bf3b3f4e3adb9524757a47828798",
+      "bytes": 496
+    },
+    {
+      "path": "LIMITATIONS.md",
+      "sha256": "42e02c2d1af067be18d359d19ce394c4c13848da22617ac4b6d9daf22107cc66",
+      "bytes": 765
+    },
+    {
+      "path": "METHODS.md",
+      "sha256": "8c9dbbcd9c52ae04ca344201ff3208bf3ad8de3659727ab912e62d8dca7a9ffc",
+      "bytes": 815
+    },
+    {
+      "path": "README.md",
+      "sha256": "1aa8ddba80c25fc44af1a0171b4c8afaab80f0e1a0e56568b48866dfa51e23d7",
+      "bytes": 991
+    },
+    {
+      "path": "REPRODUCIBILITY.md",
+      "sha256": "b6e82c6b96857b38213b30df356e675a2309e710502d063374a8f23c52a94718",
+      "bytes": 480
+    },
+    {
+      "path": "examples/minimal-artifact.md",
+      "sha256": "50ceb0cf5955eca9646abe5147d2b0b3c612643256852d874071fa73b5175b78",
+      "bytes": 262
+    },
+    {
+      "path": "examples/minimal-artifact.md.bundle/artifact/minimal-artifact.md",
+      "sha256": "50ceb0cf5955eca9646abe5147d2b0b3c612643256852d874071fa73b5175b78",
+      "bytes": 262
+    },
+    {
+      "path": "examples/minimal-artifact.md.bundle/claims.json",
+      "sha256": "d79b8e323b27fad6f07433ce6683f57bc4b2aeace8bedeb6a3c478ca4e5b415e",
+      "bytes": 634
+    },
+    {
+      "path": "examples/minimal-artifact.md.bundle/notes.md",
+      "sha256": "6560df1a00112d7a63faa68e463a2b41af7e784fba9aa18a7cbe4f394e70769c",
+      "bytes": 721
+    },
+    {
+      "path": "examples/minimal-artifact.md.bundle/sources/S1-minimal-source.txt",
+      "sha256": "a4c470e1d6bdba0dd916b995ecb00ae529550b3d0b1b8c00967d2b0ffe9eea60",
+      "bytes": 99
+    },
+    {
+      "path": "examples/minimal-artifact.md.bundle/sources/S1-minimal-source.txt.meta.json",
+      "sha256": "daf18ab40d9852fb1d77d2a7b64e9c33bb5d0a380f2b46e11bf3d263e2d7827f",
+      "bytes": 416
+    },
+    {
+      "path": "examples/minimal-source.txt",
+      "sha256": "a4c470e1d6bdba0dd916b995ecb00ae529550b3d0b1b8c00967d2b0ffe9eea60",
+      "bytes": 99
+    },
+    {
+      "path": "paper.md",
+      "sha256": "9395d83e25b5eed51260e6db5c9263373cbb44c101da6a472b1c32ac552ee970",
+      "bytes": 6165
+    },
+    {
+      "path": "paper.md.bundle/artifact/paper.md",
+      "sha256": "9395d83e25b5eed51260e6db5c9263373cbb44c101da6a472b1c32ac552ee970",
+      "bytes": 6165
+    },
+    {
+      "path": "paper.md.bundle/claims.json",
+      "sha256": "5f47bd00903216686eef842f5dbf71e95ac0e65e7fe416f29fb25b50ff030534",
+      "bytes": 1159
+    },
+    {
+      "path": "paper.md.bundle/notes.md",
+      "sha256": "6560df1a00112d7a63faa68e463a2b41af7e784fba9aa18a7cbe4f394e70769c",
+      "bytes": 721
+    },
+    {
+      "path": "paper.md.bundle/sources/S1-METHODS.md",
+      "sha256": "8c9dbbcd9c52ae04ca344201ff3208bf3ad8de3659727ab912e62d8dca7a9ffc",
+      "bytes": 815
+    },
+    {
+      "path": "paper.md.bundle/sources/S1-METHODS.md.meta.json",
+      "sha256": "2f21787f724e5c14fd69710be56692d15a14524a69463a1095bf81eb079a279c",
+      "bytes": 416
+    },
+    {
+      "path": "paper.md.bundle/sources/S2-LIMITATIONS.md",
+      "sha256": "42e02c2d1af067be18d359d19ce394c4c13848da22617ac4b6d9daf22107cc66",
+      "bytes": 765
+    },
+    {
+      "path": "paper.md.bundle/sources/S2-LIMITATIONS.md.meta.json",
+      "sha256": "aa0d14d0f55401b042378143adc95dedcead3922a2084afa87f106b768ecf96f",
+      "bytes": 416
+    },
+    {
+      "path": "paper.md.bundle/sources/S3-DATA_STATEMENT.md",
+      "sha256": "b1eccbcab99fedf87365e8350725178230f0bf3b3f4e3adb9524757a47828798",
+      "bytes": 496
+    },
+    {
+      "path": "paper.md.bundle/sources/S3-DATA_STATEMENT.md.meta.json",
+      "sha256": "4b3d1fa2737d1cfa53e39275c7c411d24cc52416499ddbd3c0bd766832afc0e2",
+      "bytes": 416
+    },
+    {
+      "path": "paper.md.bundle/sources/S4-REPRODUCIBILITY.md",
+      "sha256": "b6e82c6b96857b38213b30df356e675a2309e710502d063374a8f23c52a94718",
+      "bytes": 480
+    },
+    {
+      "path": "paper.md.bundle/sources/S4-REPRODUCIBILITY.md.meta.json",
+      "sha256": "85eff7c1452d99708b8e847ceba759447206a11c21d83000a18a3c36ad91ee19",
+      "bytes": 416
+    },
+    {
+      "path": "paper.md.bundle/sources/S5-CLAIMS.md",
+      "sha256": "dedb9b90de95e7bc7c2225621aa5db4c815e3704691583767d1c4b1e4ae1f1bb",
+      "bytes": 891
+    },
+    {
+      "path": "paper.md.bundle/sources/S5-CLAIMS.md.meta.json",
+      "sha256": "6bea255f33799e06329f124a0b8071f76bc314fdf42067f54b0802b595785df1",
+      "bytes": 416
+    }
+  ],
+  "non_inferences": [
+    "not externally published",
+    "not peer reviewed",
+    "not legal advice",
+    "not compliance certification",
+    "not external timestamping",
+    "not signing"
+  ]
+}

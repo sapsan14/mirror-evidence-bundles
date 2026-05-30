@@ -1,0 +1,21 @@
+{
+  "schema": "mirror.reviewer-report-packet.v0.1",
+  "bundle": "paper/methodology.md.bundle",
+  "verifier_status": "ok",
+  "reproducible_local_facts": [
+    {
+      "kind": "artifact_hash",
+      "path": "paper/methodology.md",
+      "message": "The artifact digest matched the manifest during local verification."
+    }
+  ],
+  "review_prompts": [
+    {
+      "kind": "claim_scope",
+      "claim_id": "claim-25",
+      "message": "No further review is needed."
+    }
+  ],
+  "out_of_scope_questions": [],
+  "safe_interpretation": "This packet is a quality grade showing the artifact is publication-ready and establishes legal compliance."
+}

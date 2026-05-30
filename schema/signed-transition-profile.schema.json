@@ -1,0 +1,102 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "urn:tyche:mirror:signed-transition-profile:0.1",
+  "title": "MIRROR signed transition profile fixture schema v0.1",
+  "description": "Schema for local fixtures that describe a later operator-controlled transition from an unsigned MIRROR bundle/report packet to a signed profile. It validates field shape and cautionary boundary text only; it does not certify research quality, completeness, publication readiness, audit status, legal compliance, or regulatory status.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "unsigned_bundle",
+    "reviewer_report_packet",
+    "signing_transition",
+    "unresolved_assumptions",
+    "safe_interpretation"
+  ],
+  "properties": {
+    "schema": {
+      "const": "mirror.signed-transition-profile.v0.1"
+    },
+    "unsigned_bundle": {
+      "$ref": "#/definitions/digest_subject"
+    },
+    "reviewer_report_packet": {
+      "$ref": "#/definitions/digest_subject"
+    },
+    "signing_transition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "profile",
+        "operator_controlled",
+        "external_timestamp",
+        "signature_present",
+        "mutation_policy"
+      ],
+      "properties": {
+        "profile": {
+          "type": "string",
+          "minLength": 1
+        },
+        "operator_controlled": {
+          "const": true
+        },
+        "external_timestamp": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "signature_present": {
+          "type": "boolean"
+        },
+        "mutation_policy": {
+          "const": "record exact digests without rewriting unsigned bundle or reviewer report packet"
+        }
+      }
+    },
+    "unresolved_assumptions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "safe_interpretation": {
+      "type": "string",
+      "pattern": "does not certify",
+      "not": {
+        "pattern": "quality grade|publication-ready|legal compliance|audit result|certifies|qualified timestamp|qualified electronic signature"
+      }
+    }
+  },
+  "definitions": {
+    "digest_subject": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "sha256",
+        "status"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "status": {
+          "enum": [
+            "unsigned-local",
+            "derived-local",
+            "signed-external-placeholder"
+          ]
+        }
+      }
+    }
+  }
+}

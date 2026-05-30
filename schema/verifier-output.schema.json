@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "urn:tyche:mirror:verifier-output:0.1",
+  "title": "MIRROR verifier output payload",
+  "description": "Schema for compact JSON payloads emitted by verify.py and pinned as selected verifier-output fixtures. These payloads are local replay aids; they do not certify claim truth, publication readiness, legal/regulatory status, or guardrail completeness.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["status", "errors"],
+  "properties": {
+    "status": {
+      "type": "string",
+      "enum": ["ok", "fail"]
+    },
+    "errors": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true
+    },
+    "failure_kinds": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["integrity_or_structure", "policy_guardrail"]
+      },
+      "uniqueItems": true,
+      "minItems": 1
+    },
+    "note": {
+      "type": "string",
+      "pattern": "do(es)? not certify claim truth or publication readiness",
+      "minLength": 1
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "status": { "const": "ok" } },
+        "required": ["status"]
+      },
+      "then": {
+        "properties": {
+          "errors": { "maxItems": 0 }
+        },
+        "not": {
+          "anyOf": [
+            { "required": ["failure_kinds"] },
+            { "required": ["note"] }
+          ]
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": { "status": { "const": "fail" } },
+        "required": ["status"]
+      },
+      "then": {
+        "required": ["failure_kinds", "note"],
+        "properties": {
+          "errors": { "minItems": 1 }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "mirror.roll-up-cli-payload-fixture.v0.1",
+  "description": "Conformance fixture for fields expected in the default update_daily_rollup.py JSON payload. The payload is local MIRROR replay and triage metadata only; it is not publication metadata, certification, or a legal/regulatory finding.",
+  "required_fields": [
+    "anchor_errors",
+    "artifact_index_diagnostics",
+    "artifact_index_errors",
+    "diagnostic_summary",
+    "entry_count",
+    "merkle_root",
+    "missing_indexes",
+    "outgoing_ticket_count",
+    "outgoing_tickets",
+    "previous_anchor_hash",
+    "rollup_path",
+    "rollup_sha256",
+    "status"
+  ],
+  "field_types": {
+    "anchor_errors": "array",
+    "artifact_index_diagnostics": "array",
+    "artifact_index_errors": "array",
+    "diagnostic_summary": "object",
+    "entry_count": "integer",
+    "merkle_root": "string_or_null",
+    "missing_indexes": "array",
+    "outgoing_ticket_count": "integer",
+    "outgoing_tickets": "array",
+    "previous_anchor_hash": "string_or_null",
+    "rollup_path": "string",
+    "rollup_sha256": "sha256_hex",
+    "status": "ok_or_fail_string"
+  },
+  "diagnostic_summary_example": {
+    "summary": {
+      "total": 4,
+      "by_category": {
+        "hash_mismatch": 2,
+        "missing_file": 1,
+        "stale_historical_hash_rows": 1
+      },
+      "by_lane": {
+        "echo": 2,
+        "road2pq-shadow": 2
+      }
+    },
+    "consumer_use": "Use category and lane counts as routing and sampling hints for local provenance-maintenance review.",
+    "safe_interpretation": "This compact diagnostic summary supports local routing and sampling only; it does not certify lane health, completeness, publication readiness, legal compliance, or regulated trust-service status."
+  },
+  "safe_interpretation": "These fields report what MIRROR observed and wrote during one local roll-up invocation. They do not certify sibling-lane completeness, publication readiness, legal compliance, or external timestamp semantics."
+}

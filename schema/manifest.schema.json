@@ -1,0 +1,413 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "urn:tyche:mirror:bundle:0.1:manifest.schema.json",
+  "title": "MIRROR Bundle Manifest v0.1.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "schema_version",
+    "bundle_created_at",
+    "created_by",
+    "artifact",
+    "sources",
+    "claims_file",
+    "assumptions",
+    "attestation",
+    "verification"
+  ],
+  "properties": {
+    "schema": {
+      "const": "urn:tyche:mirror:bundle:0.1"
+    },
+    "schema_id": {
+      "const": "urn:tyche:mirror:bundle:0.1"
+    },
+    "schema_version": {
+      "const": "0.1.0"
+    },
+    "created": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "bundle_created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "created_by": {
+      "$ref": "#/definitions/created_by"
+    },
+    "artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "$ref": "#/definitions/hash_object"
+        },
+        "media_type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "title": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/source_record"
+      }
+    },
+    "claims_file": {
+      "$ref": "#/definitions/file_reference"
+    },
+    "assumptions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/assumption_record"
+      }
+    },
+    "attestation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "signed",
+        "timestamped",
+        "signature_profile"
+      ],
+      "properties": {
+        "signed": {
+          "const": false
+        },
+        "timestamped": {
+          "const": false
+        },
+        "signature_profile": {
+          "type": "null"
+        }
+      }
+    },
+    "verification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "network_required",
+        "offline_only",
+        "hash_algorithm",
+        "semantics",
+        "checks"
+      ],
+      "properties": {
+        "network_required": {
+          "const": false
+        },
+        "offline_only": {
+          "const": true
+        },
+        "hash_algorithm": {
+          "const": "sha256"
+        },
+        "semantics": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "checks": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "compatibility": {
+      "$ref": "#/definitions/compatibility_record"
+    }
+  },
+  "definitions": {
+    "hash_object": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "algorithm",
+        "value"
+      ],
+      "properties": {
+        "algorithm": {
+          "const": "SHA-256"
+        },
+        "value": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    },
+    "created_by": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "affiliation",
+        "tool"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "affiliation": {
+          "type": "string",
+          "minLength": 1
+        },
+        "location": {
+          "type": "string"
+        },
+        "tool": {
+          "type": "string",
+          "minLength": 1
+        },
+        "orcid": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{4}-\\d{4}-\\d{3}[0-9X]$"
+        },
+        "lane": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "artifact_record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "$ref": "#/definitions/hash_object"
+        },
+        "media_type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "title": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "source_record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "kind",
+        "path",
+        "sha256",
+        "reliability"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^S(?:-[0-9A-Za-z_.-]+|[0-9A-Za-z_.-]+)$"
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "local_file",
+            "url_record",
+            "derived_note"
+          ]
+        },
+        "title": {
+          "type": "string"
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_path": {
+          "type": "string"
+        },
+        "original_path": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string",
+          "pattern": "^https://[^/\\s]+"
+        },
+        "sha256": {
+          "$ref": "#/definitions/hash_object"
+        },
+        "accessed": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "accessed_at": {
+          "type": "string"
+        },
+        "reliability": {
+          "type": "string",
+          "minLength": 1
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "file_reference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "$ref": "#/definitions/hash_object"
+        }
+      }
+    },
+    "assumption_record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "text",
+        "impact"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "impact": {
+          "type": "string",
+          "enum": [
+            "low",
+            "medium",
+            "high",
+            "blocked",
+            "unknown"
+          ]
+        }
+      }
+    },
+    "attestation_record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "signed",
+        "timestamped",
+        "signature_profile"
+      ],
+      "properties": {
+        "signed": {
+          "const": false
+        },
+        "timestamped": {
+          "const": false
+        },
+        "signature_profile": {
+          "type": "null"
+        }
+      }
+    },
+    "verification_record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "network_required",
+        "offline_only",
+        "hash_algorithm",
+        "semantics",
+        "checks"
+      ],
+      "properties": {
+        "network_required": {
+          "const": false
+        },
+        "offline_only": {
+          "const": true
+        },
+        "hash_algorithm": {
+          "const": "sha256"
+        },
+        "semantics": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "checks": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "compatibility_record": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "eatf_compatible_shape": {
+          "type": "boolean"
+        },
+        "signed": {
+          "const": false
+        },
+        "timestamped": {
+          "const": false
+        },
+        "signature_profile": {
+          "enum": [
+            "none",
+            null
+          ]
+        },
+        "statement": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "reviewer_report_packet": {
+    "path": "examples/reviewer-report-packet/default-report.json",
+    "sha256": "sha256:362cc0b7f88ec1aee9bf74a7925ebab67b161145f6351fdf47cd16bc2178f2be",
+    "status": "derived-local"
+  },
+  "safe_interpretation": "This profile certifies legal compliance and confirms the bundle is publication-ready after signing.",
+  "schema": "mirror.signed-transition-profile.v0.1",
+  "signing_transition": {
+    "external_timestamp": null,
+    "mutation_policy": "record exact digests without rewriting unsigned bundle or reviewer report packet",
+    "operator_controlled": true,
+    "profile": "future-operator-controlled-eatf-compatible-profile",
+    "signature_present": false
+  },
+  "unresolved_assumptions": [
+    "No external timestamp is present in this MIRROR lane fixture.",
+    "Any later signature would need to cover these exact digests or state the reason for divergence."
+  ],
+  "unsigned_bundle": {
+    "path": "SCHEMA.md.bundle/manifest.json",
+    "sha256": "sha256:6d3ccde5b099c579210a5f35b4496466da7a31c8c33d3e6611c888367b1de367",
+    "status": "unsigned-local"
+  }
+}

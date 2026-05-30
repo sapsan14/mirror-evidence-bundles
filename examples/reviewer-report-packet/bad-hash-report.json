@@ -1,0 +1,57 @@
+{
+  "bundle": "examples/bad-hash/artifact.md.bundle",
+  "out_of_scope_questions": [
+    {
+      "kind": "authorship",
+      "message": "The local report packet does not establish external authorship or identity."
+    },
+    {
+      "kind": "external_time",
+      "message": "The local report packet does not establish an external trusted timestamp."
+    },
+    {
+      "kind": "legal_compliance",
+      "message": "The local report packet does not make legal or regulatory determinations."
+    },
+    {
+      "kind": "source_authority",
+      "message": "The local report packet does not establish that a cited source is authoritative."
+    },
+    {
+      "kind": "scholarly_quality",
+      "message": "The local report packet does not grade the scholarly quality of the argument."
+    }
+  ],
+  "reproducible_local_facts": [
+    {
+      "kind": "artifact_hash",
+      "message": "The artifact digest matched the manifest during local verification.",
+      "path": "artifact.md"
+    },
+    {
+      "kind": "source_hash",
+      "message": "1 bundled source file digest matched the manifest during local verification.",
+      "path": "sources/source-1.txt"
+    },
+    {
+      "kind": "schema_validation",
+      "message": "The local claims file matched the supported MIRROR v0.1 claim structure.",
+      "path": "claims.json"
+    },
+    {
+      "kind": "verifier_error",
+      "message": "hash mismatch for sources/source-1.txt: expected sha256:fa7b610c57b1527acc9bccf164ead1c1b84c588465e932a371205e2fc6b88f41, got sha256:05402643049797909d4ba62b72c08eab681c238beb8ae41cb353ed5b4fb5d8a7",
+      "path": "hash mismatch for sources/source-1.txt"
+    }
+  ],
+  "review_prompts": [
+    {
+      "claim_id": "claim-1",
+      "kind": "claim_scope",
+      "message": "Check whether the cautious wording remains aligned with the artifact text before citation."
+    }
+  ],
+  "safe_interpretation": "This reviewer report packet organizes deterministic local facts and review prompts for independent re-evaluation; it does not certify completeness, publication readiness, scholarly quality, audit status, or legal/regulatory status.",
+  "schema": "mirror.reviewer-report-packet.v0.1",
+  "verifier_status": "fail"
+}

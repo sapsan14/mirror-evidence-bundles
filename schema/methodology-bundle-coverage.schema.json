@@ -1,0 +1,97 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "urn:tyche:mirror:methodology-bundle-coverage:0.1",
+  "title": "MIRROR methodology-bundle semantic fixture coverage summary",
+  "description": "Schema for the local methodology_bundle_coverage.py JSON output. This output summarizes evidence-bundle source coverage for semantic fixtures; it does not certify completeness, publication readiness, audit status, or legal/regulatory status.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "status",
+    "bundle",
+    "required_count",
+    "covered_count",
+    "missing_count",
+    "covered",
+    "missing",
+    "safe_interpretation"
+  ],
+  "properties": {
+    "status": {
+      "type": "string",
+      "enum": ["ok", "fail"]
+    },
+    "bundle": {
+      "type": "string",
+      "const": "paper/methodology.md.bundle"
+    },
+    "required_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "covered_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "missing_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "covered": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/covered_source" },
+      "uniqueItems": true
+    },
+    "missing": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "safe_interpretation": {
+      "type": "string",
+      "pattern": "does not certify",
+      "minLength": 1
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "status": { "const": "ok" } },
+        "required": ["status"]
+      },
+      "then": {
+        "properties": {
+          "missing_count": { "const": 0 },
+          "missing": { "maxItems": 0 }
+        }
+      }
+    }
+  ],
+  "definitions": {
+    "covered_source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "source_id", "bundle_path", "sha256"],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_id": {
+          "type": "string",
+          "pattern": "^(source-[0-9]+|S-[0-9A-Za-z_.-]+)$"
+        },
+        "bundle_path": {
+          "type": "string",
+          "pattern": "^sources/[^\\u0000]+$"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        }
+      }
+    }
+  }
+}

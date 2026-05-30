@@ -1,0 +1,12 @@
+{
+  "accessed": "2026-05-19",
+  "http_status": null,
+  "notes": "Local file copied into the bundle; private workspace path intentionally omitted for release-candidate review.",
+  "original_path": "omitted-private-workspace-path",
+  "retrieved_by": "bundle.py 0.1.0",
+  "sha256": {
+    "algorithm": "SHA-256",
+    "value": "8c9dbbcd9c52ae04ca344201ff3208bf3ad8de3659727ab912e62d8dca7a9ffc"
+  },
+  "source_id": "S1"
+}

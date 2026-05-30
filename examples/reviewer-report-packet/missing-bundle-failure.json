@@ -1,0 +1,7 @@
+{
+  "errors": [
+    "missing bundle directory: examples/reviewer-report-packet/missing.bundle"
+  ],
+  "safe_interpretation": "This reviewer report packet organizes deterministic local facts and review prompts for independent re-evaluation; it does not certify completeness, publication readiness, scholarly quality, audit status, or legal/regulatory status.",
+  "status": "fail"
+}

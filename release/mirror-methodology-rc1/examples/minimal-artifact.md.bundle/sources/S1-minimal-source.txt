@@ -1,0 +1,1 @@
+MIRROR examples should support local replay without turning hash checks into certification claims.

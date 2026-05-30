@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "urn:tyche:mirror:claims:0.1:claims.schema.json",
+  "title": "MIRROR Claims File v0.1.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "schema_version", "claims"],
+  "properties": {
+    "schema": {"const": "urn:tyche:mirror:claims:0.1"},
+    "schema_id": {"const": "urn:tyche:mirror:claims:0.1"},
+    "schema_version": {"const": "0.1.0"},
+    "bundle_id": {"type": "string", "minLength": 1},
+    "claims": {"type": "array", "items": {"$ref": "#/definitions/claim_record"}}
+  },
+  "definitions": {
+    "claim_record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "text", "evidence", "risk", "safe_wording"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^(?:C-[0-9]{4,}|claim-[0-9]{3,}|C[0-9]+)$"},
+        "text": {"type": "string", "minLength": 1},
+        "evidence": {"type": "array", "minItems": 1, "items": {"$ref": "#/definitions/evidence_pointer"}},
+        "risk": {"type": "string", "enum": ["low", "medium", "high", "blocked"]},
+        "safe_wording": {"type": "string", "minLength": 1},
+        "review_status": {"type": "string"},
+        "notes": {"type": "string"}
+      }
+    },
+    "evidence_pointer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_id", "pointer"],
+      "properties": {
+        "source_id": {
+          "anyOf": [
+            {"type": "string", "pattern": "^S-[0-9A-Za-z_.-]+$"},
+            {"type": "string", "pattern": "^S[0-9A-Za-z_.-]+$"},
+            {"type": "null"}
+          ]
+        },
+        "pointer": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^(?:artifact:.*\\.\\..*|(?!(?:.*(?:^|/)\\.\\.(?:/|$))).*)$"
+        },
+        "locator": {"type": "string"},
+        "artifact_path": {"type": "string"},
+        "quote": {"type": "string"}
+      }
+    }
+  }
+}

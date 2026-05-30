@@ -1,0 +1,109 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "urn:tyche:mirror:daily-roll-up:0.1",
+  "title": "MIRROR daily roll-up payload",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "date",
+    "created",
+    "source_indexes",
+    "missing_indexes",
+    "artifact_index_errors",
+    "artifact_index_diagnostics",
+    "entry_count",
+    "merkle_root",
+    "note",
+    "entries"
+  ],
+  "properties": {
+    "schema": {"const": "mirror.daily-roll-up.v0.1"},
+    "date": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"},
+    "created": {"type": "string", "minLength": 1},
+    "source_indexes": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1},
+      "uniqueItems": true
+    },
+    "missing_indexes": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1},
+      "uniqueItems": true
+    },
+    "artifact_index_errors": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1}
+    },
+    "artifact_index_diagnostics": {
+      "type": "array",
+      "items": {"$ref": "#/definitions/artifact_index_diagnostic"}
+    },
+    "entry_count": {"type": "integer", "minimum": 0},
+    "merkle_root": {
+      "anyOf": [
+        {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        {"type": "null"}
+      ]
+    },
+    "note": {
+      "type": "string",
+      "pattern": "no external timestamping or regulated trust service"
+    },
+    "entries": {
+      "type": "array",
+      "items": {"$ref": "#/definitions/rollup_entry"}
+    }
+  },
+  "definitions": {
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "rollup_entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["lane", "path", "purpose", "sha256", "verified"],
+      "properties": {
+        "lane": {"type": "string", "minLength": 1},
+        "path": {"type": "string", "minLength": 1},
+        "purpose": {"type": "string"},
+        "sha256": {"$ref": "#/definitions/sha256"},
+        "verified": {"type": "string"}
+      }
+    },
+    "artifact_index_diagnostic": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["category", "lane", "path", "message"],
+      "properties": {
+        "category": {
+          "enum": [
+            "conflicting_hash_rows",
+            "hash_mismatch",
+            "missing_artifact_index",
+            "missing_file",
+            "stale_historical_hash_rows",
+            "unsafe_path"
+          ]
+        },
+        "lane": {"type": "string", "minLength": 1},
+        "path": {"type": "string", "minLength": 1},
+        "message": {"type": "string", "minLength": 1},
+        "actual_sha256": {"$ref": "#/definitions/sha256"},
+        "expected_sha256": {
+          "anyOf": [
+            {"$ref": "#/definitions/sha256"},
+            {
+              "type": "array",
+              "items": {"$ref": "#/definitions/sha256"},
+              "minItems": 1
+            }
+          ]
+        },
+        "stale_sha256": {
+          "type": "array",
+          "items": {"$ref": "#/definitions/sha256"},
+          "minItems": 1
+        }
+      }
+    }
+  }
+}

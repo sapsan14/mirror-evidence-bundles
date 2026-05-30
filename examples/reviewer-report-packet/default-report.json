@@ -1,0 +1,39 @@
+{
+  "schema": "mirror.reviewer-report-packet.v0.1",
+  "bundle": "paper/methodology.md.bundle",
+  "verifier_status": "ok",
+  "reproducible_local_facts": [
+    {
+      "kind": "artifact_hash",
+      "path": "paper/methodology.md",
+      "message": "The artifact digest matched the manifest during local verification."
+    },
+    {
+      "kind": "schema_validation",
+      "path": "paper/methodology.md.bundle/claims.json",
+      "message": "The local claims file matched the supported MIRROR v0.1 claim structure."
+    }
+  ],
+  "review_prompts": [
+    {
+      "kind": "claim_scope",
+      "claim_id": "claim-25",
+      "message": "Check whether the cautious wording remains aligned with the artifact text before citation."
+    }
+  ],
+  "out_of_scope_questions": [
+    {
+      "kind": "authorship",
+      "message": "The local report packet does not establish external authorship or identity."
+    },
+    {
+      "kind": "legal_compliance",
+      "message": "The local report packet does not make legal or regulatory determinations."
+    },
+    {
+      "kind": "scholarly_quality",
+      "message": "The local report packet does not grade the scholarly quality of the argument."
+    }
+  ],
+  "safe_interpretation": "This reviewer report packet organizes deterministic local facts and review prompts for independent re-evaluation; it does not certify completeness, publication readiness, scholarly quality, audit status, or legal/regulatory status."
+}

@@ -1,0 +1,145 @@
+{
+  "artifact": {
+    "media_type": "text/markdown",
+    "path": "artifact/paper.md",
+    "sha256": {
+      "algorithm": "SHA-256",
+      "value": "9395d83e25b5eed51260e6db5c9263373cbb44c101da6a472b1c32ac552ee970"
+    },
+    "title": "paper"
+  },
+  "assumptions": [
+    {
+      "id": "A1",
+      "impact": "medium",
+      "text": "Generated claims require human review before publication."
+    },
+    {
+      "id": "A2",
+      "impact": "low",
+      "text": "HTTPS source inputs are recorded as descriptor files and are not fetched by this bundler."
+    },
+    {
+      "id": "A-PATH-POLICY",
+      "impact": "low",
+      "text": "Public-facing metadata omits private absolute filesystem paths; this is a local private review bundle, not publication, signing, or timestamping."
+    }
+  ],
+  "attestation": {
+    "signature_profile": null,
+    "signed": false,
+    "timestamped": false
+  },
+  "bundle_created_at": "2026-05-19T09:44:59Z",
+  "claims_file": {
+    "path": "claims.json",
+    "sha256": {
+      "algorithm": "SHA-256",
+      "value": "5f47bd00903216686eef842f5dbf71e95ac0e65e7fe416f29fb25b50ff030534"
+    }
+  },
+  "compatibility": {
+    "eatf_compatible_shape": true,
+    "signature_profile": "none",
+    "signed": false,
+    "statement": "This MIRROR bundle records reproducible provenance for research artifacts. It is unsigned and is not a qualified electronic signature, qualified timestamp, or other eIDAS-regulated trust service.",
+    "timestamped": false
+  },
+  "created": "2026-05-19T09:44:59Z",
+  "created_by": {
+    "affiliation": "Tyche Institute, Tallinn, Estonia",
+    "lane": "mirror",
+    "location": "Tallinn, Estonia",
+    "name": "Tyche Institute",
+    "orcid": "0000-0003-2452-7096",
+    "tool": "bundle.py 0.1.0"
+  },
+  "schema": "urn:tyche:mirror:bundle:0.1",
+  "schema_id": "urn:tyche:mirror:bundle:0.1",
+  "schema_version": "0.1.0",
+  "sources": [
+    {
+      "accessed": "2026-05-19",
+      "id": "S1",
+      "kind": "local_file",
+      "notes": "Copied into this local bundle from package-relative review material; private workspace paths are intentionally omitted.",
+      "path": "sources/S1-METHODS.md",
+      "reliability": "primary",
+      "sha256": {
+        "algorithm": "SHA-256",
+        "value": "8c9dbbcd9c52ae04ca344201ff3208bf3ad8de3659727ab912e62d8dca7a9ffc"
+      },
+      "title": "METHODS.md"
+    },
+    {
+      "accessed": "2026-05-19",
+      "id": "S2",
+      "kind": "local_file",
+      "notes": "Copied into this local bundle from package-relative review material; private workspace paths are intentionally omitted.",
+      "path": "sources/S2-LIMITATIONS.md",
+      "reliability": "primary",
+      "sha256": {
+        "algorithm": "SHA-256",
+        "value": "42e02c2d1af067be18d359d19ce394c4c13848da22617ac4b6d9daf22107cc66"
+      },
+      "title": "LIMITATIONS.md"
+    },
+    {
+      "accessed": "2026-05-19",
+      "id": "S3",
+      "kind": "local_file",
+      "notes": "Copied into this local bundle from package-relative review material; private workspace paths are intentionally omitted.",
+      "path": "sources/S3-DATA_STATEMENT.md",
+      "reliability": "primary",
+      "sha256": {
+        "algorithm": "SHA-256",
+        "value": "b1eccbcab99fedf87365e8350725178230f0bf3b3f4e3adb9524757a47828798"
+      },
+      "title": "DATA_STATEMENT.md"
+    },
+    {
+      "accessed": "2026-05-19",
+      "id": "S4",
+      "kind": "local_file",
+      "notes": "Copied into this local bundle from package-relative review material; private workspace paths are intentionally omitted.",
+      "path": "sources/S4-REPRODUCIBILITY.md",
+      "reliability": "primary",
+      "sha256": {
+        "algorithm": "SHA-256",
+        "value": "b6e82c6b96857b38213b30df356e675a2309e710502d063374a8f23c52a94718"
+      },
+      "title": "REPRODUCIBILITY.md"
+    },
+    {
+      "accessed": "2026-05-19",
+      "id": "S5",
+      "kind": "local_file",
+      "notes": "Copied into this local bundle from package-relative review material; private workspace paths are intentionally omitted.",
+      "path": "sources/S5-CLAIMS.md",
+      "reliability": "primary",
+      "sha256": {
+        "algorithm": "SHA-256",
+        "value": "dedb9b90de95e7bc7c2225621aa5db4c815e3704691583767d1c4b1e4ae1f1bb"
+      },
+      "title": "CLAIMS.md"
+    }
+  ],
+  "verification": {
+    "checks": [
+      "manifest_schema",
+      "claims_schema",
+      "artifact_hash",
+      "claims_hash",
+      "source_hashes",
+      "claim_source_links",
+      "notes_present"
+    ],
+    "hash_algorithm": "sha256",
+    "network_required": false,
+    "offline_only": true,
+    "semantics": [
+      "offline_hash_replay",
+      "schema_validation"
+    ]
+  }
+}

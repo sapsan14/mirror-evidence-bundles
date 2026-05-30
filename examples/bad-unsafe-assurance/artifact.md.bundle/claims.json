@@ -1,0 +1,21 @@
+{
+  "claims": [
+    {
+      "evidence": [
+        {
+          "pointer": "sources/source-1.txt",
+          "source_id": null
+        }
+      ],
+      "id": "C-0001",
+      "notes": "Generated from CLI arguments; review before publication.",
+      "review_status": "draft",
+      "risk": "medium",
+      "safe_wording": "This example certifies compliance for a research artifact.",
+      "text": "This example certifies compliance for a research artifact."
+    }
+  ],
+  "schema": "urn:tyche:mirror:claims:0.1",
+  "schema_id": "urn:tyche:mirror:claims:0.1",
+  "schema_version": "0.1.0"
+}

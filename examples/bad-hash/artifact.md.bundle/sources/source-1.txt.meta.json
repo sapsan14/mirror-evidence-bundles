@@ -1,0 +1,12 @@
+{
+  "accessed": "2026-05-19",
+  "http_status": null,
+  "notes": "Local file copied into the bundle.",
+  "original_path": "examples/bad-hash/source-note.txt",
+  "retrieved_by": "bundle.py 0.1.0",
+  "sha256": {
+    "algorithm": "SHA-256",
+    "value": "b0a2ab2155a233c39bf3d08ae49ba3c7248fcdb230872bf6bfe7de0c1dc1fbe1"
+  },
+  "source_id": "S-0001"
+}

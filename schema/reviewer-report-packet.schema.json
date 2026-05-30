@@ -1,0 +1,112 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "urn:tyche:mirror:reviewer-report-packet:0.1",
+  "title": "MIRROR reviewer report packet fixture schema v0.1",
+  "description": "Schema for local reviewer-facing report packet fixtures. This validates field shape and cautionary boundary text only; it does not certify research quality, completeness, publication readiness, or legal/regulatory status.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "bundle",
+    "verifier_status",
+    "reproducible_local_facts",
+    "review_prompts",
+    "out_of_scope_questions",
+    "safe_interpretation"
+  ],
+  "properties": {
+    "schema": {
+      "const": "mirror.reviewer-report-packet.v0.1"
+    },
+    "bundle": {
+      "type": "string",
+      "minLength": 1
+    },
+    "verifier_status": {
+      "enum": ["ok", "fail"]
+    },
+    "reproducible_local_facts": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/local_fact"
+      }
+    },
+    "review_prompts": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/review_prompt"
+      }
+    },
+    "out_of_scope_questions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/out_of_scope_question"
+      }
+    },
+    "safe_interpretation": {
+      "type": "string",
+      "pattern": "does not certify",
+      "not": {
+        "pattern": "quality grade|publication-ready|legal compliance|audit result|certifies"
+      }
+    }
+  },
+  "definitions": {
+    "local_fact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "path", "message"],
+      "properties": {
+        "kind": {
+          "enum": ["artifact_hash", "source_hash", "schema_validation", "verifier_error", "bundle_assumption"]
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "message": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "review_prompt": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "claim_id", "message"],
+      "properties": {
+        "kind": {
+          "enum": ["claim_scope", "evidence_pointer", "missing_caveat", "broad_wording", "source_context"]
+        },
+        "claim_id": {
+          "type": "string",
+          "pattern": "^claim-[0-9]+$"
+        },
+        "message": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "out_of_scope_question": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "message"],
+      "properties": {
+        "kind": {
+          "enum": [
+            "authorship",
+            "external_time",
+            "legal_compliance",
+            "source_authority",
+            "scholarly_quality"
+          ]
+        },
+        "message": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}

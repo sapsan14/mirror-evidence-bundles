@@ -1,0 +1,89 @@
+{
+  "artifact": {
+    "media_type": "text/markdown",
+    "path": "artifact.md",
+    "sha256": {
+      "algorithm": "SHA-256",
+      "value": "9547abc6244a7943d308d4baf324c649000f403d1c3eae74cb39c695a6d0b113"
+    },
+    "title": "artifact"
+  },
+  "assumptions": [
+    {
+      "id": "A-0001",
+      "impact": "medium",
+      "text": "Generated claims require human review before publication."
+    },
+    {
+      "id": "A-0002",
+      "impact": "low",
+      "text": "HTTPS source inputs are recorded as descriptor files and are not fetched by this bundler."
+    }
+  ],
+  "attestation": {
+    "signature_profile": null,
+    "signed": false,
+    "timestamped": false
+  },
+  "bundle_created_at": "2026-05-19T07:13:53Z",
+  "claims_file": {
+    "path": "claims.json",
+    "sha256": {
+      "algorithm": "SHA-256",
+      "value": "d017ded51d47805f30cedc4805455e23b2b34e62b91a1fa9488959f7844344ca"
+    }
+  },
+  "compatibility": {
+    "eatf_compatible_shape": true,
+    "signature_profile": "none",
+    "signed": false,
+    "statement": "This MIRROR bundle records reproducible provenance for research artifacts. It is unsigned and is not a qualified electronic signature, qualified timestamp, or other eIDAS-regulated trust service.",
+    "timestamped": false
+  },
+  "created": "2026-05-19T07:13:53Z",
+  "created_by": {
+    "affiliation": "Tyche Institute, Tallinn, Estonia",
+    "lane": "mirror",
+    "location": "Tallinn, Estonia",
+    "name": "Tyche Institute",
+    "orcid": "0000-0003-2452-7096",
+    "tool": "bundle.py 0.1.0"
+  },
+  "schema": "urn:tyche:mirror:bundle:0.1",
+  "schema_id": "urn:tyche:mirror:bundle:0.1",
+  "schema_version": "0.1.0",
+  "sources": [
+    {
+      "accessed": "2026-05-19",
+      "id": "S-0001",
+      "kind": "local_file",
+      "notes": "Copied from public fixture path examples/good/source-note.txt.",
+      "path": "sources/source-1.txt",
+      "reliability": "primary",
+      "sha256": {
+        "algorithm": "SHA-256",
+        "value": "b0a2ab2155a233c39bf3d08ae49ba3c7248fcdb230872bf6bfe7de0c1dc1fbe1"
+      },
+      "source_path": "examples/good/source-note.txt",
+      "title": "source-note.txt"
+    }
+  ],
+  "verification": {
+    "checks": [
+      "manifest_schema",
+      "claims_schema",
+      "artifact_hash",
+      "claims_hash",
+      "source_hashes",
+      "claim_source_links",
+      "notes_present"
+    ],
+    "hash_algorithm": "sha256",
+    "network_required": false,
+    "offline_only": true,
+    "semantics": [
+      "offline_hash_replay",
+      "schema_validation"
+    ]
+  }
+}

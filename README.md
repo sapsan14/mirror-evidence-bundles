@@ -33,8 +33,10 @@ package.
 - `examples/` contains positive and negative fixtures.
 - `release/mirror-methodology-rc1/` contains the minimal public-safe evidence
   package used by the article.
-- `paper/jors-issues-2026-05-30/` contains the current JORS Issues article
-  package, build manifest, source checks, and review-gate reports.
+- `paper/jors-issues-2026-05-30/` contains the article package as submitted to
+  the Journal of Open Research Software on 30 May 2026, with its build manifest,
+  source checks, and review-gate reports. The published article is
+  https://doi.org/10.5334/jors.753.
 
 ## Quick check
 
@@ -54,7 +56,15 @@ MIRROR is released under the Apache License 2.0. See `LICENSE`.
 
 ## Citation
 
-Please cite the public release using `CITATION.cff`:
+Please cite the article that describes MIRROR:
+
+```text
+Sokolov A 2026 MIRROR: Local Evidence Bundles for Reproducible Research
+Software Review, with a JANUS Case Study. Journal of Open Research Software,
+14: 65. DOI: https://doi.org/10.5334/jors.753
+```
+
+and the software release (`CITATION.cff`):
 
 ```text
 https://doi.org/10.5281/zenodo.20463358

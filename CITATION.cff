@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use MIRROR, please cite the Zenodo software record."
+message: "If you use MIRROR, please cite the article in the Journal of Open Research Software and the Zenodo software record."
 title: "MIRROR: Local Evidence Bundles for Reproducible Research Software Review"
 type: software
 authors:
@@ -20,3 +20,17 @@ keywords:
   - "evidence bundles"
   - "artifact review"
   - "software sustainability"
+preferred-citation:
+  type: article
+  title: "MIRROR: Local Evidence Bundles for Reproducible Research Software Review, with a JANUS Case Study"
+  authors:
+    - family-names: "Sokolov"
+      given-names: "Anton"
+      orcid: "https://orcid.org/0000-0003-2452-7096"
+      affiliation: "Tyche Institute"
+  journal: "Journal of Open Research Software"
+  volume: 14
+  start: 65
+  year: 2026
+  doi: "10.5334/jors.753"
+  url: "https://doi.org/10.5334/jors.753"
